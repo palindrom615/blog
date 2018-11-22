@@ -31,7 +31,12 @@ plugins:
   - jekyll-feed
 defaults:
   -
-    comments: true
+    scope:
+      path: ""
+    values:
+      comments: true
+disqus:
+  shortname: palindrom615-me
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
