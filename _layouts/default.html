@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {%- include analytics.html -%}
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+    {%- include head.html -%}
+  </head>
+  <body>
+
+    {%- include header.html -%}
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        {{ content }}
+        </div>
+    </main>
+
+    <footer>
+      {%- include footer.html -%}
+    </footer>
+  </body>
+</html>
