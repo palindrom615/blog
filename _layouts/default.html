@@ -1,21 +1,22 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     {%- include analytics.html -%}
-    {%- include mathjax.html -%}
-    <meta charset="utf-8">
+    {% if page.math %}
+      {%- include mathjax.html -%}
+    {% endif %}
+    <meta charset="utf-8" />
     <title>{{ page.title }}</title>
     {%- include head.html -%}
   </head>
   <body>
-    
     {%- include header.html -%}
-    
+
     <main class="page-content" aria-label="Content">
       <div class="wrapper">
         {{ content }}
         {%- include utterances.html -%}
-        </div>
+      </div>
     </main>
 
     <footer>

@@ -36,6 +36,7 @@ defaults:
       path: ""
     values:
       comments: true
+      math: false
 disqus:
   shortname: palindrom615-me
 
