@@ -1,1 +1,0 @@
-# palindrom615.github.io
