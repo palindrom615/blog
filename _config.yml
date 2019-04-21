@@ -27,6 +27,7 @@ google_analytics_id: UA-136784336-1
 
 # Build settings
 markdown: kramdown
+mathjax: true
 theme: minima
 plugins:
   - jekyll-feed
