@@ -19,10 +19,10 @@ layout: default
     {{ content }}
   </div>
 
-  {%- if site.disqus.shortname -%}
-    {%- include disqus_comments.html -%}
-  {%- endif -%}
     <div class="wrapper">
+    {% comment %} {%- if site.disqus.shortname -%}
+      {%- include disqus_comments.html -%}
+    {%- endif -%} {% endcomment %}
     {%- include utterances.html -%}
     </div>
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
