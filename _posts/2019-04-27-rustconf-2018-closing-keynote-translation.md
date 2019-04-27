@@ -106,7 +106,7 @@ Rust에서는 간단하고 알기 쉬운 소유권 설계를 갖춘 데이터 �
 
 과거, 대부분의 게임은 어쩔 수 없이 "데이터 지향"으로 만들어졌습니다. 128KB의 RAM(SNES)에는 추상화를 위한 공간이 별로 없었거든요. 이걸 "Action Replay" 시대라고 부를까 합니다. 그때는 게임의 RAM 상태를 매 프레임마다 패치할 수 있는 "Game Genies"나 "Game Sharks"라고 부르는 치팅 기기가 있던 시대였습니다. "Game Genie"같은 기기들은 게임 카트리지의 ROM을 패치할 수 있었지만, "Action Replay" 시절의 기기는 실제로 훅을 VBlank handler라는 걸로 집어넣어서 매 프레임마다 실제 상수 주소에 박혀있는 메모리 값을 덮어써서 예를 들어 생명이 줄지 않게 한다든가 하는 조작을 할 수 있었습니다.
 
-이것이 동작하는 이유는 128KB의 RAM에서는 malloc따위를 구현할 수가 없었기 때문입니다. 스토리지의 모든 바이트가 귀중했던 그 시절의 게임들은 직접 메모리 내의 게임 상태를 위치를 알기 쉽게 수동으로 관리했습니다. NES / SNES 시대에는 메모리가 너무 적어서 그래픽 요소(타일, 스프라이트)와 논리적 상태가 구분되지 않았고 "엔티티" 구조 따위를 넣고 싶어도 게임 내에 있을 수 있는 "것들"의 최대치가 턱없이 적었기 때문에 추상화가 들어갈 공간이 없었죠. 이 시대는 "화면이 꺼지면 치유"라고 불리기도 하는데 화면을 끄면 게임 레벨이 전부 초기화됐기 때문이죠(적들도 마술처럼 회복됩니다).
+이것이 동작하는 이유는 128KB의 RAM에서는 `malloc`따위를 구현할 수가 없었기 때문입니다. 스토리지의 모든 바이트가 귀중했던 그 시절의 게임들은 직접 메모리 내의 게임 상태를 위치를 알기 쉽게 수동으로 관리했습니다. NES / SNES 시대에는 메모리가 너무 적어서 그래픽 요소(타일, 스프라이트)와 논리적 상태가 구분되지 않았고 "엔티티" 구조 따위를 넣고 싶어도 게임 내에 있을 수 있는 "것들"의 최대치가 턱없이 적었기 때문에 추상화가 들어갈 공간이 없었죠. 이 시대는 "화면이 꺼지면 치유"라고 불리기도 하는데 화면을 끄면 게임 레벨이 전부 초기화됐기 때문이죠(적들도 마술처럼 회복됩니다).
 
 Rust로 NES 게임을 구현한다고 생각해보면 (아마 **무지** 어렵겠지만 불가능은 아니겠죠? 최소한 C보다 어렵지는 않을 겁니다. 아마 그 시절 거의 모든 게임은 어셈블러로 직접 구현했을 겁니다) 이런 식으로 정적인 자료 구조를 정의해야 했을 겁니다.
 
@@ -133,20 +133,20 @@ pub struct GameState {
     pub player_pos: Vector2<i16>,
     pub player_vel: Vector2<i8>,
     pub player_health: i8,
-    
+
     // 스크린에 5개 이상의 투사체를 표시하고 싶다고요? 안됩니다. 플레이어가
     // 더 발사하면, 제일 오래된 것을 지우거나 쏜 투사체가 부딪히거나 
     // 화면 밖으로 나가길 기다릴 수밖에 없습니다 (메가맨처럼)
     pub player_projectiles: [Option<PlayerProjectile>; 4],
-    
+
     // 모든 레벨 데이터는 이 상수 블럭에 저장됩니다.
     pub level_tiles: [[Tile; 64]; 64],
-    
+
     // 스크린에는 8명의 적이 표시되고, 다 생성되면 적을 더 스폰하기 위해서는
     // 적이 없어지길 기다려야 합니다 (커비의 모험에서는, TAS에서 이것이
     // 심하게 남용되었습니다)
     pub enemies: [Enemy; 8],
-    
+
     // etc...
 }
 ```
@@ -176,7 +176,7 @@ pub struct Entity {
     // 게임에 240(불바다의 바우저에서는 232)개 이상의 중요 엔티티가
     // 생기면 게임은 멈춥니다.
     pub important: bool,
-    
+
     pub position: Vector3<f32>,
     pub rotation: Vector3<f32>,
 
@@ -184,16 +184,16 @@ pub struct Entity {
     // 쉽게 표시할 수도 있죠. 나중에 보겠지만 중요합니다.
     pub animation: EntityAnimation,
     pub behavior: EntityBehavior,
-    
+
     pub visible: bool,
     pub damage_mario_on_touch: bool,
     pub home_in_on_mario: bool,
-    
+
     // 여러 애니메이션과 게임 플레이를 위한 보편적인 타이머
     pub timer: u16,
     // 엔티티 타입마다 다르게 쓰이는 보편적인 액션
     pub action: u8,
-    
+
     // Lots more stuff...
 }
 
@@ -204,13 +204,13 @@ pub struct WorldCollisions;
 pub struct GameState {
     pub world_render_geometry: WorldRenderGeometry,
     pub world_collisions: WorldCollisions,
-    
+
     // 절대, 240은 넘으면 안됩니다
     pub entities: [Entity; 240],
-    
+
     // 포인터 대신, 엔티티 배열의 인덱스를 저장합니다
     pub mario_entity: EntityIndex,
-    
+
     // Lots more stuff...
 }
 ```
@@ -250,55 +250,53 @@ fn main() {
     loop {
         // 이 루프를 한 번 돌면 1프레임, 60fps 기준 16ms입니다
 
-        // 모든 입력값을 한 프레임에 한 번에 다 받습니다. input 이벤트같은 건 없습니다.
-        // 마리오 64같은 게임에서는 컨트롤러의 상태를 불러 올 때 실제 일어나는 것은 단순히 
-        // 컨트롤러 상태를 저장해 놓는 지정된 메모리 공간을 읽어 오는 것일 뿐입니다.
-        // 여기서는 프레임의 시작 부분에서 처리를 하고 있지만 실제 마리오 64에서는 프레임 당 
-        // 한 번은 맞지만 아마 여러 군데에 분산되어 있을 겁니다.
+        // 모든 입력값을 한 프레임에 한 번에 다 받습니다. input 이벤트같은 건 
+        // 없습니다. 마리오 64같은 게임에서는 컨트롤러의 상태를 불러 올 때 실제
+        // 일어나는 것은 단순히 컨트롤러 상태를 저장해 놓는 지정된 메모리 공간을
+        // 읽어 오는 것일 뿐입니다. 여기서는 프레임의 시작 부분에서 처리를 하고 
+        // 있지만 실제 마리오 64에서는 프레임 당 한 번의 처리를 여러 군데에 분산
+        // 시켜 놨을 겁니다.
         let input_state = capture_input_state();
 
-        // Let's have a series of functions change the state of the game_state
-        // based on the previous game state and the input.  We'll be very very
-        // fancy, and we'll give this very SIMPLE pattern an overly fancy name,
-        // and we'll call each of these functions a "system".
+        // 이전 게임의 상태와 입력에 맞춰서 game_state의 상태를 변경시키는 여러
+        // 개의 함수를 짜 보겠습니다. 이 함수에 아주 화려한 대신 단순한 방식으로
+        // 이름을 지어주도록 합시다. 하나의 함수를 이제 'system'이라고 부릅니다.
 
-        // Set state flags inside mario to start jumping, or maybe set a state
-        // flag for whether you're paused.
+        // 마리오 내부에 점프를 할 지 말지, 멈출 지 말지 결정하는 상태 플래그를
+        // 설정
         input_system(&mut game_state, &input_state);
-        
-        // pos += vel * dt;  Apply gravity.  Do collision detection and response
-        // for all entities.
+
+        // pos += vel * dt;  중력을 적용. 충돌 검사를 하고 모든 엔티티에 반응.
         physics_system(&mut game_state);
-        
-        // Run entity logic for every entity, this might farm out into
-        // update_mario, update_baddies, update_platforms, etc.
+
+        // 모든 엔티티의 엔티티 로직을 실행. update_mario, update_baddies,
+        // update_platforms 등을 호출.
         entity_logic_system(&mut game_state);
-        
-        // ... lots more systems
-        
-        // Render the current game state.  In the N64 era this was in some ways
-        // vastly simpler than now, but even then it was probably still pretty
-        // messy and stateful, so maybe our game state includes the state of
-        // loaded graphics resources as well.
+
+        // ... 기타 여러 시스템
+
+        // 현재 게임 상태를 렌더. N64 시대에는 현재보다 좀 더 쉽고 간단했지만,
+        // 지저분하고 상태에 의존적인 것은 마찬가지입니다. 우리 게임의 상태도
+        // 로딩된 그래픽 리소스의 상태를 포함하고 있을 겁니다.
         render_system(&mut game);
 
-        // Read state flags of entities and trigger new audio, this is messy
-        // and stateful just like rendering.
+        // 엔티티의 상태 플래그를 읽고 새 오디오를 트리거하는데, 렌더링과 마찬
+        // 가지로 지저분하고 상태에 의존적입니다.
         audio_system(&mut game);
-        
-        // Wait on VBlank
+
+        // VBlank를 기다리기
         wait_vblank();
-        
-        // repeat.
+
+        // 반복.
     }
 }
 ```
 
-이런 식으로 게임을 만드는 건 추천하지 않습니다! 이게 지나치게 단순화되었고 이걸로도 충분히 복잡한 게임을 만들 수 있다고 생각한다 해도 이런 식으로 만들면 절차 지향의 거대한 흙덩이 구조가 될 겁니다. 이걸로 얻을 수 있는 이점이 있을까요? 엄청난 단점은 있을 겁니다. 모든 게임 상태가 투명하고 변화 가능하기 때문에 실수로 뭔가가 바뀌면 그 원인을 찾기 어려울 겁니다. 현대에는 아무도 이렇게 모든 상태를 전역으로 놓고 코딩하지 않습니다. 하지만 한가지 좋은 점이 있는데, 바로 100% safe rust로 짜면서 borrow checker과 싸우지 않아도 된다는 겁니다. 이렇게 짜면 포인터를 전혀 이용할 수 없을 겁니다. 전체 게임 상태에 내부 포인터를 사용하면 이런 구조에 어떤 변화가 있을 때마다 포인터가 전부 바뀔 것이기 때문에 포인터 대신 배열의 인덱스 값을 저장해야 합니다. "mario_entity" 필드가 그 예입니다. 너무 제한적인 것 같지만 어차피 물체의 개수가 N개로 제한되어 있다는 점을 고려하면 (기억하겠지만, malloc도 쓸 수 없습니다!) 당연한 선택입니다. 뭔가를 더할 때는 `all_the_textures: [TextureDscriptor; 256]`같은 식으로 하고 텍스쳐를 표현할 때는 이 정적 배열의 인덱스를 사용해야 합니다. rust는 퍼블릭 구조체의 각각 다른 필드들의 borrow를 달리 관리할 수 있는것도 장점입니다. 그러니까, 이 엔진같은 것은 항상 상태를 읽을 수 있고 필요한 만큼 바꿀 수 있는 전체 퍼블릭 구조체의 중첩 트리 형태가 될 것입니다. 대개의 "액션 리플레이" 시대 게임에서는 이런 식으로 malloc도 없고 필요한 것들은 정적인 배열에 아주 제한적으로 배치되면서, 대부분의 것들은 정적인 구조체 어딘가에 조심스레 배치됩니다.
+이런 식으로 게임을 만드는 건 추천하지 않습니다! 위의 예시는 그냥 예시일 뿐, 이렇게도 충분히 복잡한 게임을 만들 수 있다고 생각할 수는 있습니다. 그래도 이런 식이면 게임이 절차 지향의 거대한 진흙덩이 구조가 될 겁니다. 뭔가 여기에 장점이 있을까요? 엄청난 단점은 있을 겁니다. 모든 게임 상태가 투명하고 변화 가능하기 때문에 실수로 뭔가가 바뀌면 그 원인을 찾기 어려울 겁니다. 현대에는 아무도 이렇게 모든 상태를 전역으로 놓고 코딩하지 않습니다. 하지만 한가지 좋은 점이 있는데, 바로 100% safe rust로 짜면서 borrow checker과 싸우지 않아도 된다는 겁니다. 이렇게 짜면 포인터를 전혀 이용할 수 없을 겁니다. 전체 게임 상태에 내부 포인터를 사용하면 구조에 어떤 변화가 있을 때마다 포인터가 전부 바뀔 것이기 때문에 포인터 대신 배열의 인덱스 값을 저장해야 합니다. "mario_entity" 필드가 그 예입니다. 너무 제한적인 것 같지만 어차피 물체의 개수가 N개로 제한되어 있다는 점을 고려하면 (기억하겠지만, malloc도 쓸 수 없습니다!) 당연한 선택입니다. 뭔가를 더할 때는 `all_the_textures: [TextureDscriptor; 256]`같은 식으로 하고 텍스쳐를 표현할 때는 이 정적 배열의 인덱스를 사용해야 합니다. rust는 public 구조체의 필드의 borrow를 하나하나 따로 관리할 수 있는것도 장점입니다. 그러니까, 이 일종의 엔진은 항상 상태를 읽을 수 있고 필요한 만큼 바꿀 수 있는 전체 퍼블릭 구조체의 중첩 트리 형태가 될 것입니다. 대개의 "액션 리플레이" 시대 게임에서는 이런 식으로 malloc도 없고 필요한 것들은 정적인 배열에 아주 제한적으로 배치되면서, 대부분의 것들은 정적인 구조체 어딘가에 조심스레 배치됩니다.
 
-포인터 대신 인덱스를 쓰는 것이 기술적으로야 "안전하다고" 여겨지지만 사실은 포인터를 쓸 때 날 수 있는 UB(undefined behavior; 옮긴이), 크래시를 갱신이 안되었거나 잘못된 인덱스를 썼을 때의 "랜덤하고 예측 불가능한" 행동에 이어질 패닉과 트레이드하는 것이나 마찬가집니다. 어쨌든 뭐 됐습니다. 자세한 것은 다음에 다시 다루고 일단 이런 디자인을 안전하고 borrow checker에 맞게 구현할 수 있다는 것만 짚고 넘어갑시다.
+포인터 대신 인덱스를 쓰는 것이 기술적으로야 "안전하다고" 여겨지지만 사실은 포인터 때문에 생길 수 있는 UB(undefined behavior; 옮긴이)나 크래시가 없는 대신, 갱신이 안되었거나 잘못된 인덱스를 써서 "랜덤하고 예측 불가능한" 행동이 불러 일으킬 패닉과 맞바꾸는 것이나 마찬가집니다. 어쨌든 뭐 됐습니다. 자세한 것은 다음에 다시 다루고 일단 이런 디자인을 안전하고 borrow checker에 맞게 구현할 수 있다는 것만 짚고 넘어갑시다.
 
-옛날 게임 구조를 rust로 심하게 단순화된 (인정합니다) 방식으로 구현하면서 어떻게 rust로 게임을 짤 수 있는지를 보여드렸습니다. 이걸 프로젝트에 추천하고 싶지는 않지만 지금도 이렇게 짜이는 게임들이 **있습니다**. 직설적으로, 하나의 일만 하는, 절차적인 방식으로요. 구체적인 게임 이름을 찝진 않겠지만 많은 게임들이 OO의 스타일을 살짝 가미한 채 이런 식으로 만들어집니다. 전에 단 하나의 **12k**줄로 이루어진 맵 생성 함수를 본 적이 있습니다. 이게 나쁜 건 아니고, 아무리 얕잡아봐도 이렇게 짜는 사람들은 뭘 신경쓰고 뭘 냅둬도 되는지를 아는데 탁월한 천재들입니다. 진짜 지혜가 거기 담겨있습니다!
+옛날 게임 구조를 rust로 심하게 단순화된 (인정합니다) 방식으로 구현하면서 어떻게 rust로 게임을 짤 수 있는지를 보여드렸습니다. 이걸 프로젝트에 추천하고 싶지는 않지만 지금도 이렇게 짜이는 게임들이 **있습니다**. 직관적으로, 하나의 일만 하는, 절차적인 방식으로요. 구체적으로 예를 들진 않겠지만 많은 게임들이 OO의 스타일을 살짝 가미한 채 이런 식으로 만들어집니다. 전에 단 하나의 **12k**줄로 이루어진 맵 생성 함수를 본 적이 있습니다. 이게 나쁜 건 아니고, 이렇게 짜는 사람들은 중요한 것과 아닌것을 구분하는데 탁월한 천재들입니다. 진짜 지혜가 거기 담겨있습니다!
 
 하지만 나는 전혀 이런 방식을 추천하지 않습니다. 이런 걸 "UR 게임 아키텍쳐"라고 해 두고, 다시 본론으로 돌아갑시다. "데이터 지향! ECS를 쓰세요"라는 제 주장을 bottom-up 방식으로 살펴봤습니다. 이제 다시 top-down 방식으로 살펴봅시다.
 
@@ -308,18 +306,18 @@ fn main() {
 
 OO의 원칙이 뭘까요? 모든 의견이 일치하는 건 아니지만 대체로 맞는 포인트를 좀 짚어 봅시다.
 
-* 단일 책임 원칙 - 객체는 하나의 논리적 책임을 갖고 있고 메소드들은 그 책임 내에서 동작해야 합니다.
-* 캡슐화 - 데이터와 그걸 다룰 함수를 하나로 묶고 밖에서의 방해와 남용으로부터 보호해야 합니다.  행동 자체는 바뀌지 않은 채로 내부적인 구현을 리팩토링할 수 있도록 합니다.
-* 추상화, 또는 "Liskov 치환 원칙" 등등 - 하나의 기본 클래스(또는 인터페이스나 그런거)를 공유하고 그걸 통해서 사용하는 한 자식 클래스를 다른 것으로 바꾸는 것이 가능해야 합니다.
+* 단일 책임 원칙 - 객체는 하나의 논리적 책임을 갖고 있고 메소드들은 그 안에서만 동작해야 합니다.
+* 캡슐화 - 데이터와 그걸 다룰 함수를 하나로 묶고 클래스 외부로부터의 방해와 남용으로부터 보호해야 합니다. 외부 코드의 변화 없이 내부적인 구현을 리팩토링할 수 있도록 합니다.
+* 추상화, 또는 "Liskov 치환 원칙" 등등 - 기본 클래스(또는 인터페이스 등)를 사용하는 코드에 자식 클래스의 인스턴스를 대입하는 것이 문제가 없어야 합니다.
 * 인터페이스 분리, 또는 의존 최소화의 원칙 등등 - 한 클래스는 최소한의 인터페이스만 사용해야 합니다
 
-실용적인 차원에서 OO 언어들은 OO 디자인을 위해 객체 메소드나 프라이빗 데이터, 상속, 가상 메소드 등의 중요한 기능들을 갖고 있습니다. C++는 게임 개발자들이 자기만의 엔진을 만드는데 제일 인기있는 언어이고 제가 알기론 제 발등을 찍는 많은 OO 기능들을 갖고 있기 때문에 주로 C++로 예를 들겠습니다.
+OO 언어들은 OO 디자인을 위해 객체 메소드나 프라이빗 데이터, 상속, 가상 메소드 등의 기능들을 갖고 있습니다. C++는 게임 개발자들이 자기만의 엔진을 만드는데 제일 인기있는 언어이기도 하고, 제 발등을 찍는(footguns) 많은 OO 기능들을 갖고 있기 때문에 주로 C++로 예를 들겠습니다.
 
-이 원칙들을 시험해보면서 게임 개발에 어떻게 오용될 수 있는지를 보고 심지어 대부분의 경우 실패하게 되었는지 (이제는 잘 알려진 사실입니다)를 얘기하려고 합니다. 이들은 rust보다 훨씬 다양하게 실패합니다. 몇몇 원칙을 지키면서 게임을 개발하는 것이 가능*은* 하고 완전히 끔찍한 아이디어는 아닙니다. 나는 *전혀* OO를 좋아하지 않지만 OO에 좋은 점도 많습니다 (rust에서는 그런 것들을 정말 잘 할 수 있습니다)
+이 원칙들을 시험해보면서 게임 개발에 어떻게 오용될 수 있고 심지어 대부분 실패하게 되었는지 (이제는 잘 알려진 사실입니다)를 얘기하려고 합니다. 이들은 rust보다 훨씬 크게 실패해왔습니다. 몇몇 원칙을 지키면서 게임을 개발하는 것이 가능*은* 하고 완전히 끔찍한 생각은 아닙니다. 나는 *전혀* OO를 좋아하지 않지만 OO와 관계있거나 OO에서 유래한(rust에서도 잘 되는) 멋진 아이디어가 몇가지 있습니다.
 
-* 점 오퍼레이터 또는 "후위 함수". 하스켈을 해봤다면 "이름에 따른 타입 해석"과 반대인 "타입에 따른 이름 해석"이 그것입니다. 100개의 짧고 간결한 이름을 쓰면서 이름이 겹치거나 C처럼 접두사를 붙이지 않고도 "효과적으로" 함수 호출을 할 수 있게 합니다. IDE랑도 잘 붙습니다!
-* 인터페이스의 컨트랙트 - rust의 trait입니다! 상속도 없고, C++의 순수 가상 클래스처럼 작고 의미있는 역할이 붙어있을 때 최고입니다. 하스켈의 타입클래스와 마찬가지로 멋집니다.
-* 데이터 은닉 - 데이터가 유효한 채로 유지하는게 중요할 때 안전하지 않은 코드가 접근하지 못하도록 안전한 인터페이스를 만들 수 있도록 해줍니다. 작은 "라이브러리" 코드를 만들 때 무척 유용합니다.
+* 점 오퍼레이터 또는 "후위 함수". 하스켈에서 흔히 하는 "이름에 따른 타입 해석"과 순서를 반대로 쓰는, "타입에 따른 이름 해석"이 그것입니다. 100개의 짧고 간결한 이름을 쓰면서 이름이 겹치거나 C처럼 접두사를 붙이지 않고도 "효과적으로" 함수 호출을 할 수 있게 합니다. IDE랑도 잘 붙습니다!
+* contract를 내장한 interface - rust의 trait입니다! 상속도 없고, C++의 순수 가상 클래스처럼 작고 의미있는 역할이 붙어있을 때 가장 좋습니다. 하스켈의 타입클래스와 마찬가지로 멋집니다.
+* 데이터 은닉 - 데이터 정합성을 유지해야 할 때 안전하지 않은 코드가 접근하지 못하도록 안전한 인터페이스를 만들 수 있도록 해줍니다. 작은 "라이브러리" 코드를 만들 때 무척 유용합니다.
 
 위의 좋은 점들에 관해서는 다루지 않겠습니다. 저것들은 정말 좋고, 위대하기까지 합니다. 저것들을 빼고, 남은 OO 디자인이 왜 게임 개발에서 실패하는지를 보겠습니다.
 
@@ -340,14 +338,14 @@ struct Player {
 
     HumanoidItem left_hand_item;
     HumanoidItem right_hand_item;
-    
+
     Vec2F aim_position;
 
     float health;
     EntityId focused_entity;
     float food_level;
     bool admin;
-    
+
     // So, so much more...
 };
 
@@ -358,9 +356,9 @@ struct Monster {
     Vec2F position;
     Vec2F velocity;
     float mass;
-    
+
     MonsterAnimationState animation_state;
-    
+
     float health;
     EntityId current_target;
     DamageRegion damage_region;
@@ -372,12 +370,12 @@ struct Npc {
     Vec2F position;
     Vec2F velocity;
     float mass;
-    
+
     HumanoidAnimationState animation_state;
 
     HumanoidItem left_hand_item;
     HumanoidItem right_hand_item;
-    
+
     float health;
     Vec2F aim_position;
 
@@ -388,14 +386,15 @@ struct WorldTile { ... };
 
 struct World {
     List<EntityId> player_ids;
-    // Hmm, we're probably going to need an interface and downcasting here?
+    // 흠, 인터페이스 하나를 만들어서 여기에 상속시켜야겠는데요?
     HashMap<EntityId, void*> entities;
-    
+
     MultiArray2D<WorldTile> tiles;
-    
+
     // So, so much more...
 };
 ```
+
 데이터 타입에 겹치는 구조가 많으니 서브 객체로 만들어 봅시다.
 
 ```c++
@@ -420,12 +419,12 @@ struct HumanoidState {
 struct Player {
     Physics physics;
     HumanoidState humanoid;
-    
+
     float health;
     EntityId focused_entity;
     float food_level;
     bool admin;
-    
+
     ...
 };
 
@@ -434,10 +433,10 @@ struct DamageRegion { ... };
 
 struct Monster {
     Physics physics;
-    
+
     MonsterAnimationState animation_state;
-    
-    float health;
+
+    float health;...
     EntityId current_target;
     DamageRegion damage_region;
 
@@ -447,7 +446,7 @@ struct Monster {
 struct Npc {
     Physics physics;
     HumanoidState humanoid;
-    
+
     float health;
 
     ...
@@ -458,9 +457,9 @@ struct WorldTile { ... };
 struct World {
     List<EntityId> player_ids;
     HashMap<EntityId, void*> entities;
-    
+
     MultiArray2D<WorldTile> tiles;
-    
+
     ...
 };
 ```
@@ -470,58 +469,53 @@ struct World {
 ```c++
 typedef uint32_t EntityId;
 
-// Forward declare World to pass it to Entity
+// 엔티티에서 사용하기 위해 일단 선언
 struct World;
 
 struct InputState { ... };
 struct RenderState { ... };
 
-// Pure virtual interface!
+// 순수 가상 인터페이스!
 class Entity {
 public:
-    // Okay, *definitely* all entities will have a position, and it's probably
-    // fine for this to be const.
+    // 자, *당연히* 모든 엔티티가 위치를 갖고 있을 테고, const로 해도 문제
+    // 없겠죠.
     virtual Vec2F position() const = 0;
-    
-    // Do all entities have a velocity?  Probably not actually, there are
-    // probably going to be stationary entities, so let's skip velocity.  Any
-    // other common fields?  Honestly probably there are a few that deserve to
-    // go here, but there can't be *too* many without immediately thinking of
-    // cases where an entity doesn't have them.  Maybe they all return Maybe or
-    // something, but that doesn't sound very useful as an interface?  We'll
-    // just make more interfaces for those and stick to OO design!
-    
-    // So, we're going to need to update each entity somehow and probably render
-    // it, so let's define a few methods for this.
-    
-    // Well, we definitely have to pass the entity's world to its update method,
-    // because for example a Player has to be able to do things like spawn
-    // projectile entities, and so do monsters and NPCs probably.  Also,
-    // monsters have to know where the player is to attack them!
+
+    // 모든 엔티티가 속도를 갖고 있을까요? 자리에 박혀있는 엔티티도 있을 테니,
+    // 일단 속도는 스킵합시다. 다른 공통 필드가 있을까요? 여기에 넣을 만 한
+    // 몇몇이 있지만, 그 필드가 없는 엔티티가 있을 지를 생각해보면 많진 않을
+    // 겁니다. Maybe 타입을 리턴할 수도 있지만 인터페이스로서 그리 유용하진
+    // 않겠죠. 그냥 따로 다른 인터페이스를 만들어서 OO 디자인을 달성하도록
+    // 합시다!
+
+    // 각 엔티티를 업데이트하고 렌더해야 하니까 메소드 몇 개를 정의해 봅시다.
+
+    // 엔티티의 업데이트 메소드에 파라미터로 world들 넘겨줘야 합니다. 왜냐하면
+    // 예를 들어서, 플레이어나 몬스터, NPC가 투사체를 만들어야 하니까요. 또,
+    // 몬스터가 플레이어를 공격하기 위해서는 어디 있는지 알아야 하니까요.
     void update(World* world) = 0;
-    
-    // Let's assume that these aren't toooo stateful and messy and each entity
-    // can just "render themselves" in some reasonable way.
+
+    // 너무 그렇게 지저분한 상태기반이 아니라서 각 엔티티가 어찌어찌 "자기 
+    // 자신을 렌더링"할 수 있다고 가정합니다.
     void input(InputState const& input_state) = 0;
     void render(RenderState& render_state) = 0;
-    
+
 private:
-    // No private data!  We definitely know that we should favor composition
-    // over inheritance because we've been told this before, so only pure
-    // virtual interfaces for us!  This is one facet of OO design that's
-    // *probably* basically dead now?  I don't actually know for sure, but I
-    // know this has been talked about to death so we don't have to beat THIS
-    // dead of a horse.
+    // private 데이터는 없습니다! 전에 말했듯이, 상속보다 컴포지션을 활용해야
+    // 합니다. 그러니 우리에겐 순수 가상 인터페이스 뿐입니다! *아마* 이제 죽은
+    // OO 디자인의 한 단면일까요? 확실하진 않지만 이미 예전에 죽어버린 것으로
+    // 많이 논의된 내용이니 우리가 신경쓸 필요는 없을 겁니다.
 };
 
 class Player : Entity {
 public:
     Vec2F position() const override;
-    
+
     void input(InputState const& input_state) override;
     void update(World* world) override;
     void render(RenderState& render_state) override;
-    
+
 private:
     Physics m_physics;
     HumanoidState m_humanoid;
@@ -532,11 +526,11 @@ private:
 class Monster : Entity {
 public:
     Vec2F position() const override;
-    
+
     void input(InputState const& input_state) override;
     void update(World* world) override;
     void render(RenderState& render_state) override;
-    
+
 private:
     Physics m_physics;
 
@@ -546,11 +540,11 @@ private:
 class NPC : Entity {
 public:
     Vec2F position() const override;
-    
+
     void input(InputState const& input_state) override;
     void update(World* world) override;
     void render(RenderState& render_state) override;
-    
+
 private:
     Physics m_physics;
     HumanoidState m_humanoid;
@@ -563,14 +557,14 @@ struct WorldTile { ... };
 struct World {
     List<EntityId> player_ids;
     HashMap<EntityId, shared_ptr<Entity>> entities;
-    
+
     MultiArray2D<WorldTile> tiles;
-    
+
     ...
 };
 ```
 
-먼저, 왜 EntityId같은게 있죠? C++이니까 그냥 포인터를 쓰면 되는거 아닌가요? 음, 그렇게 하는게 *굉장히* unsafe하기 때문에 내가 본 모든 게임 엔진 (가비지 컬렉터가 없는 언어로 짜인)에서는 "entity_id"와 실제 엔티티 포인터를 매치시킨 맵을 한 곳에 갖고 있습니다. 예를 들어 C++에서 모든 엔티티가 shared_ptr같은 것을 갖고 있다고 합시다. 그럼 모든 월드가 참조 순환을 갖고 있는 거대한 덩어리가 되고 엔티티는 절대 삭제되지 않을 겁니다. 큰 문제죠. 반대로 생 포인터를 계속 갖고 있으면 계속 포인터가 잘못된 것을 가리키고 일시적인 버그를 해결하기 어려워져서 아무도 못하게 될 겁니다 (최소한 아무도 생 포인터나 리퍼런스를 "오랫동안" 갖고있지 않을 겁니다). weak_ptr를 사용하면 *되긴 하고*, 때때로 사용되긴 하지만 그냥 id로 관리하는게 네트워킹이나 디스크에 세이브, 로드하는데 더 편합니다. 사실 웃긴게, 바로 이런 구조를 쓰지 않으려고 "UR 게임 아키텍쳐"를 바꾸는 것인데, 이건 실제 게임 엔진에서 매우 *매우* 흔한 구조입니다!
+먼저, 왜 EntityId같은게 있죠? C++이니까 그냥 포인터를 쓰면 되는거 아닌가요? 음, 그렇게 하는게 *굉장히* unsafe하기 때문에 내가 본 모든 (가비지 컬렉터가 없는 언어로 짜인)게임 엔진에서는 "entity_id"와 실제 엔티티 포인터를 매치시킨 맵을 한 곳에 갖고 있습니다. 예를 들어 C++에서 모든 엔티티가 shared_ptr같은 것을 갖고 있다고 합시다. 그럼 World 전체가 참조 순환을 갖고 있는 거대한 덩어리가 되고 엔티티는 절대 삭제되지 않을 겁니다. 큰 문제죠. 반면 그냥 포인터를 사용하면 포인터가 자꾸 잘못된 것을 가리키게 되고 잔 버그가 생겨서 아무도 관리 못하게 될 겁니다 (최소한 아무도 생 포인터나 리퍼런스를 "오랫동안" 관리하려 하지 않을 겁니다). weak_ptr를 사용하면 *되긴 하고*, 때때로 사용되긴 하지만 그냥 id로 관리하는게 네트워킹이나 디스크에 세이브, 로드하는데 더 편합니다. 사실 웃긴게, 바로 이런 구조 때문에 "UR 게임 아키텍쳐"를 안쓰려고 하는 데, 실제로는 게임 엔진에서 매우 *매우* 흔하게 이렇게 합니다!
 
 (게임 엔진에서 Entityid는 보통 uint64_t를 하나씩 카운트를 올려서 쓰거나 uint32_t를 순환해서 씁니다. 그래서 EntityId가 재사용되는 일은 아예 또는 거의 없습니다. 이렇게 하면 엔티티가 없어지면 보통 그걸 바로 다른 엔티티가 대체하기 전에 모니터링하면서 없어진 것을 알립니다. "generational indexs"라는 다른 패턴이 있는데 꽤 중요해서 다음에 다루겠습니다)
 
@@ -582,17 +576,18 @@ struct World {
 class Player : Entity {
 public:
     Vec2F position() const override;
-    
+
     void input(InputState const& input_state) override;
     void update(World* world) override;
     void render(RenderState& render_state) override;
-    
+
     float health() const;
 
 private:
     ...
 };
 ```
+
 방금 OO 디자인을 따르면서 피를 퍼블릭으로 만들었습니다. 그런데 피가 일정 수치 이하로 닳면 어떤 애니메이션 상태를 트리거하는 invariant가 생기면 어쩌죠? 데미지는? 단일 책임 원칙때문에 *몬스터*가 *플레이어*의 피를 건드려서는 안될 겁니다.
 
 새 요구 사항이 생겼습니다. "운영자" 플레이어는 쫓아가면 안됩니다. 새 접근자를 추가합시다!
@@ -601,11 +596,11 @@ private:
 class Player : Entity {
 public:
     Vec2F position() const override;
-    
+
     void input(InputState const& input_state) override;
     void update(World* world) override;
     void render(RenderState& render_state) override;
-    
+
     float health() const;
     bool is_admin() const;
 
@@ -620,11 +615,11 @@ private:
 class Monster : Entity {
 public:
     Vec2F position() const override;
-    
+
     void input(InputState const& input_state) override;
     void update(World* world) override;
     void render(RenderState& render_state) override;
-    
+
     DamageRegion const& damage_region() const;
 
 private:
@@ -636,13 +631,13 @@ private:
 
 새 구현사항입니다. 특정 몬스터는 플레이어가 근처 필드에서 건드려야만 어그로가 끌립니다. 접근자를 좀 더 달아야겠네요. OO 원칙을 위해 Physics 타입의 내부 변수 m_physics가 있는데 필드에서 서로 건드리는지를 알려면 이것에 접근해야 합니다. Physics의 내부 변수 Physics::onGround에 접근자를 달고 Player에도 Player::onGround 접근자를 만들어 Physics::onGround 를 사용할 수 있게 해야겠네요. 정말 많은 접근자를 써야 하는군요.
 
-새 요구사항이 올 때마다 한때는 보기 좋았던 인터페이스에다가 새 구멍을 뚫어야 합니다. 8개월 뒤, 이렇게 개발했던 게임 프로토타입에는 **정말 많은** 구멍이 뚫려있을 겁니다. 많은 코드는 여러 개의 엔티티에 동시에 영향을 미치기 때문에 둘 곳을 찾기 어렵고 논리적으로 비슷한 기능을 하는 많은 코드가 여러 파일에 나눠져 있을 겁니다. "OO의 문제는 모든 것이 다른 곳에서 일어난다는 점이다"
+새 요구사항이 올 때마다 한때는 보기 좋았던 인터페이스에다가 새 구멍을 뚫어야 합니다. 8개월 뒤, 이렇게 개발했던 게임 프로토타입에는 **정말 많은** 구멍이 뚫려있을 겁니다. 많은 코드는 여러 개의 엔티티에 동시에 영향을 미치기 때문에 둘 곳을 찾기 어렵고 논리적으로 비슷한 기능을 하는 많은 코드가 여러 파일에 나눠져 있을 겁니다. "OO의 문제는 모든 것이 클래스 밖에서 일어난다는 점이다"
 
 새 요구사항이 왔습니다. 특정한 아이템에 대한 아이디어가 있는데 플레이어가 이것을 들고 특정한 적에게 접근하면 아이템이 빛이 납니다. 이 적은 아이템을 무서워해서 도망가는데 그들이 빛나는 아이템에 열중해 있을 때는 특별한 애니메이션이 트리거됩니다. 이건 플레이어가 어떤 퀘스트를 완료했을 때만 적용됩니다.
 
 아마 절망 속에 두 손 들 수밖에 없겠죠. 4개의 개별 모듈(플레이어, 아이템, 몬스터, 애니메이션)의 내부 값을 모두 알아야 하는 작업입니다. 아주 많은 접근자와 특별한 인터페이스를 붙여야 합니다. 누더기처럼 되겠죠.
 
-이건 만들어진 예지만 내가 마주쳤던 실례와 그리 다르지 않습니다. 이제는 게임에서 OO는 대체로 이렇게 된다는건 상식입니다. 데이터 은닉은 invariant를 코드 밖에서 관리하는 작업이 적은 게임에서는 아주 한정적인 도구입니다. 게임에서 많은, 거의 대개의 재미있는 행동은 여러 데이터 타입에 걸쳐있고 한 엔티티에 "속해" 있지 않습니다. 많은 엔티티 타입 끼리는 80%에서 60%가 비슷하고 재사용이 힘듭니다. 엔티티 안에 모듈을 넣을 때마다 더 많은 레이어들이 추가됩니다. "UR 아키텍쳐"에 비해 뭐가 더 나아졌나요? 함수 안에 있는 모든 자료가 퍼블릭은 아니라는거죠. 접근자를 계속 계속 계속 추가해서 거의 다를 바가 없긴 하지만. 조금 더 나은 코드 구조이지만 어찌보면 더 나쁜 구조 아닌가요?
+이건 만들어진 예지만 내가 마주쳤던 실례와 그리 다르지 않습니다. 이제는 OO로 게임을 개발하면 대체로 이렇게 된다는건 상식입니다. 게임은 적고 집약된 데이터의 invariant를 코드로 관리하는 작업과 거리가 멉니다. 그러니 게임 개발에 데이터 은닉은 효용이 제한적입니다. 게임에서 대개의 흥미로운 작용은 여러 데이터 타입에 걸쳐있고 한 엔티티에 "속해" 있지 않습니다. 많은 엔티티 타입의 80%~60%가 비슷한 반면 재사용은 힘듭니다. 엔티티 안에 모듈을 넣을 때마다 더 많은 층위가 추가됩니다. "UR 아키텍쳐"에 비해 뭐가 더 나아졌나요? 함수 안에 있는 모든 자료가 퍼블릭은 아니라는거죠. 접근자를 계속 계속 계속 추가해서 거의 다를 바가 없긴 하지만. 조금 더 나은 코드 구조이지만 어찌보면 더 나쁜 구조 아닌가요?
 
 좋아요, C++에는 많은 단점이 있고 내가 어떤 결론을 내릴 지 미리 말했죠(ECS 쓰세요!). 이런 식으로 게임을 만들 **수는** 있습니다. 많은 문제가 생기고 구멍투성이에 결국은 거대한 객체들로 남겠죠. 생생한 대답을 위해서 starbound 내부의 실제 실전 Player 객체의 현재 버전을 봅시다.
 
@@ -1025,7 +1020,7 @@ c++가 단점이 있긴 하지만 모든 게임들이 starbound처럼 일시적�
 class Entity {
 public:
     virtual Vec2F position() const = 0;
-    
+
     void input(InputState const& input_state) = 0;
     void update(World* world) = 0;
     void render(RenderState& render_state) = 0;
@@ -1194,7 +1189,7 @@ struct HumanoidState {
 struct Player {
     physics: Physics,
     humanoid: HumanoidState,
-    
+
     health: f32,
     focused_entity: EntityIndex,
     food_level: f32,
@@ -1222,7 +1217,7 @@ struct NpcBehavior { ... }
 struct Npc {
     physics: Physics,
     humanoid: HumanoidState,
-    
+
     health: f32,
     behavior: NpcBehavior,
 
@@ -1242,7 +1237,7 @@ struct GameState {
 
     entities: Vec<Option<Entity>>,
     players: Vec<EntityIndex>,
-    
+
     ...
 }
 
@@ -1338,7 +1333,7 @@ struct Entity {
     player: Option<PlayerState>,
     monster: Option<MonsterState>,
     npc: Option<NpcState>,
-    
+
     ...
 }
 
@@ -1349,7 +1344,7 @@ struct GameState {
 
     entities: Vec<Option<Entity>>,
     players: Vec<EntityIndex>,
-    
+
     ...
 }
 
@@ -1421,7 +1416,7 @@ struct Entity {
     health: Option<Health>,
     hunger: Option<Hunger>,
     player: Option<PlayerState>,
-    
+
     ...
 }
 ```
@@ -1525,7 +1520,7 @@ impl GenerationalIndexAllocator {
 
     // Returns true if the index was allocated before and is now deallocated
     pub fn deallocate(&mut self, index: GenerationalIndex) -> bool { ... }
-    
+
     pub fn is_live(&self, index: GenerationalIndex) -> bool { ... }
 }
 ```
@@ -1582,7 +1577,7 @@ type EntityMap<T> = GenerationalIndexArray<T>;
 
 struct GameState {
     assets: Assets,
-    
+
     entity_allocoator: GenerationalIndexAllocator,
 
     physics_components: EntityMap<PhysicsComponent>,
@@ -1641,7 +1636,7 @@ type EntityMap<T> = GenerationalIndexArray<T>;
 
 struct GameState {
     assets: Assets,
-    
+
     entity_allocoator: GenerationalIndexAllocator,
     // We're assuming that this will contain only types of the pattern
     // `EntityMap<T>`.  This is dynamic, so the type system stops being helpful
@@ -1688,10 +1683,10 @@ impl ComponentRegistry {
     // Registers a component, components must implement a special trait to allow
     // e.g. loading from a JSON config.
     pub fn register_component<T: Component>(&mut self) { ... }
-    
+
     // Sets up entries for all registered components to the given ECS
     pub fn setup_ecs(&self, ecs: &mut ECS) { ... }
-    
+
     // Loads a given entity into the given ECS, loading all the components from
     // the given config
     pub fn load_entity(&self, config: Json, ecs: &mut ECS) -> Entity { ... }
@@ -1706,10 +1701,10 @@ pub struct ResourceRegistry { ... }
 impl ResourceRegistry {
     // The Resource trait provides loading from JSON and other things.
     pub fn register_resource<T: Resource>(&mut self) { ... }
-    
+
     // Sets up entries for all registered resources to the given ECS
     pub fn setup_ecs(&self, ecs: &mut ECS) { ... }
-    
+
     // Adds a resource to the given ECS by loading from the given config.
     pub fn load_resource(&self, config: Json, ecs: &mut ECS) { ... }
 }
@@ -1726,7 +1721,7 @@ impl ResourceRegistry {
 // resources together into "plugins".
 fn load_component_registry() -> ComponentRegistry {
     let mut component_registry = ComponentRegistry::new();
-    
+
     component_registry.register::<PhysicsComponent>();
     component_registry.register::<PlayerComponent>();
     ...
