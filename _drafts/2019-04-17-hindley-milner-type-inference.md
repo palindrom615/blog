@@ -1,8 +1,7 @@
 ---
 layout: post
 title: "힌들리-밀너 타입 추론 Hindley-Milner Type Inference"
-date: 2019-04-17 23:52:00 +0900
-tags: jekyll update
+tags: [hindley milner type inference 힌들리 밀너 타입 추론]
 math: true
 ---
 

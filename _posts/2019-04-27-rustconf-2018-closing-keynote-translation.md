@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "My RustConf 2018 Closing Keynote 번역"
-date: 2019-04-27 15:25:00 +0900
 tags: [rust, ECS, 게임개발]
 ---
 
