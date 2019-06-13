@@ -47,3 +47,6 @@ defaults:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+picture:
+  source: assets/img
