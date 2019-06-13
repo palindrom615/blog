@@ -13,23 +13,19 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: pal-github.io
-email: palindrom615@hanmail.net
+title: palindrom615's blog
+email: palindrom615@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  palindrom615's blog
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://palindrom615.me" # the base hostname & protocol for your site, e.g. http://example.com
-#twitter_username: jekyllrb
+twitter_username: palindrom615
 github_username: palindrom615
-google_analytics_id: UA-136784336-1
+google_analytics: UA-136784336-1
 
 # Build settings
 markdown: kramdown
 theme: minima
-plugins:
-  - jekyll-feed
 defaults:
   -
     scope:
@@ -37,8 +33,8 @@ defaults:
     values:
       comments: true
       math: false
-disqus:
-  shortname: palindrom615-me
+# disqus:
+#   shortname: palindrom615-me
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
