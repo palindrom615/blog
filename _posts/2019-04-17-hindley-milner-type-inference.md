@@ -186,7 +186,7 @@ HM 알고리즘도 배워 보면 좋겠지만, 직접 구현할 게 아닌 이�
 
 ## 리퍼런스
 
-[Practical Foundations for Programming Languages](https://www.cs.cmu.edu/~rwh/pfpl/2nded.pdf)
-https://en.wikipedia.org/wiki/System_F
-https://en.wikipedia.org/wiki/Free_variables_and_bound_variables
-http://akgupta.ca/blog/2013/06/07/so-you-still-dont-understand-hindley-milner-part-3/
+* [Practical Foundations for Programming Languages](https://www.cs.cmu.edu/~rwh/pfpl/2nded.pdf)
+* https://en.wikipedia.org/wiki/System_F
+* https://en.wikipedia.org/wiki/Free_variables_and_bound_variables
+* http://akgupta.ca/blog/2013/06/07/so-you-still-dont-understand-hindley-milner-part-3/
