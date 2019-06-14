@@ -110,15 +110,16 @@ $$
 
 변수 할당에 적용되는 $\mathtt{Let}$ 규칙도 해석하기 그리 어렵지 않다.
 
-
 $$
  \displaystyle\frac{\Gamma \vdash e_0:\sigma \quad\quad \Gamma,\,x:\sigma \vdash e_1:\tau}{\Gamma \vdash \mathtt{let}\ x = e_0\ \mathtt{in}\ e_1 : \tau}
 $$
+
 > $e_0$의 타입이 $\sigma$이고, $x$가 $\sigma$ 타입을 갖고 있을 경우 $e_1$ 표현식이 $\tau$ 타입이라면, $x$에 $e_0$를 할당했을 경우 $e_1$은 $\tau$ 타입으로 유추 가능하다.
 
 ### $\mathtt{Inst}$
 
 다섯번째 $\mathtt{Inst}$ 규칙은 상속을 포함한 서브타이핑에 관한 규칙이다.
+
 $$
  \displaystyle\frac{\Gamma \vdash e:\sigma' \quad \sigma' \sqsubseteq \sigma}{\Gamma \vdash e:\sigma}
 $$
