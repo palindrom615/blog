@@ -40,9 +40,9 @@ size(1);
 
 위의 함수는 올바른 자바스크립트 코드이고, 따라서 올바른 타입스크립트 코드이다. 그러나, `size` 함수 내부에서 파라미터의 `length` 프로퍼티를 참조하고 있으므로 맨 밑에서처럼 파라미터에 `length` 프로퍼티가 없는 `number` 타입을 집어넣는 것은 타입 안전성의 관점에서 보면 틀린 코드이다.
 
-![타입스크립트에서 에러 없이 컴파일되는 모습](/assets/img/2019-04-17-hindley-milner-type-inference/1.png)
+{% picture 2019-04-17-hindley-milner-type-inference/1.png --alt 타입스크립트에서 에러 없이 컴파일되는 모습 %}
 
-![플로우에서는 타입 에러를 잡아낸다](/assets/img/2019-04-17-hindley-milner-type-inference/2.png)
+{% picture 2019-04-17-hindley-milner-type-inference/2.png --alt 플로우에서는 타입 에러를 잡아낸다 %}
 
 위 사진을 보면 타입스크립트에서는 에러를 찾아주지 못한 채 컴파일되는 반면 플로우에서는 타입 에러를 잡아내 주는 것을 알 수 있다.
 
