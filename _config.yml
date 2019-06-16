@@ -50,3 +50,8 @@ defaults:
 
 picture:
   source: assets/img
+
+algolia:
+  application_id: '6NVT0Q79Y8'
+  index_name: 'dev_tag'
+  search_only_api_key: '9e4e9856b78049cf6fb9f55d2acb018e'
