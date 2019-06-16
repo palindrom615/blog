@@ -10,7 +10,7 @@ math: true
 * C++의 `auto`나 lombok의 `var`, `val`? `VeryLongClass veryLongInstance = new VeryLongClass();` 따위의 할당식을 `auto veryLongInstance = new VeryLongClass();`로 줄여서 써도 되는 것?
 * 그냥 rust나 go같은 언어에서 타입을 쓰기 귀찮으면 빼먹어도 컴파일러에서 알아서 타입을 넣어주는 것?
 
-나와 같은 애플리케이션 개발자들 다수가 이런 식으로 피상적으로 이해하고 있을 것 같다.
+나와 같은 애플리케이션 개발자들 다수가 언어 차원에서 지원하는 타입 추론을 이런 식으로 피상적으로 이해하고 있을 것 같다.
 
 타입 시스템 중에서도 이번 글의 주제인 **힌들리-밀너 타입 시스템 Hindley-Milner type system**은 이름에서 알 수 있듯이 [논리학자 힌들러가 제시하고](https://www.semanticscholar.org/paper/THE-PRINCIPAL-TYPE-SCHEME-OF-AN-OBJECT-IN-LOGIC/fc64117e5d5ed5947a0c85c55597e4116d6e55c6) [컴퓨터 과학자 밀너가 재발견한](https://www.sciencedirect.com/science/article/pii/0022000078900144) 타입 이론으로, 70년대에 이미 학문적으로 완성된 내용이다. 고전적인 타입 추론 알고리즘으로서 많은 언어, 정적 분석 도구, 컴파일러에 도입되어 타입 시스템에 사용되는 중이다. 한국인 개발자 커뮤니티나 블로그에도 간혹 토픽으로 올라오는데 정작 한글로 HM 타입 시스템의 알고리즘/수학적 배경을 설명해주는 글이 거의 없는게 아쉬워 공부하면서 블로그에 올리려고 한다. PL 이론이 인기 없긴 하지만 한국에도 전공자가 없진 않을텐데, 이런 건 자기네들끼리만 돌려보나? 틀린 내용이야 많겠지만 지적해주면 바로바로 고치려고 한다. 피드백 환영!😉😉
 
