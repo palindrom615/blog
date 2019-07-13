@@ -23,9 +23,14 @@ twitter_username: palindrom615
 github_username: palindrom615
 google_analytics: UA-136784336-1
 
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
 # Build settings
 markdown: kramdown
 theme: minima
+show_excerpts: true
 defaults:
   -
     scope:
