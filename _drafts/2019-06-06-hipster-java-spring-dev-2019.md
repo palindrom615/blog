@@ -1,7 +1,8 @@
 ---
 layout: post
-title: "2019년에 힙스터가 자바 스프링 개발하기"
+title: "2019년에 자바 스프링 개발하기"
 tags: [java, spring, springboot, gradle, hipster]
+excerpt: "자바 스프링"
 ---
 
 ## 자바

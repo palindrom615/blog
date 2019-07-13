@@ -3,6 +3,7 @@ layout: post
 title: "힌들리-밀너 타입 추론 Hindley-Milner Type Inference"
 tags: [hindley milner type inference 힌들리 밀너 타입 추론]
 math: true
+excerpt: "힌들리 밀너 타입 추론의 수학적 배경을 애플리케이션 개발자의 관점에서 알아보기"
 ---
 
 ## 타입 추론?

@@ -1,8 +1,9 @@
-===
+---
 layout: post
 title: "리액트로 대형 폼 컴포넌트 다루기"
 tags: [react form 리액트 폼 antd]
-===
+excerpt: "사내 어드민, 총합 100개 이상의 필드를 가진 폼 컴포넌트를 antd로 다루기"
+---
 
 ## 백그라운드
 

@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "My RustConf 2018 Closing Keynote 번역"
-tags: [rust, ECS, 게임개발]
+tags: [rust, 러스트, ECS, 게임개발]
+excerpt: "[번역]rust로 해보는 게임 개발, 그리고 ECS"
 ---
 
 원문: [https://kyren.github.io/2018/09/14/rustconf-talk.html](https://kyren.github.io/2018/09/14/rustconf-talk.html)
