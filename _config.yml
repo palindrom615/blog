@@ -17,6 +17,7 @@ title: palindrom615's blog
 email: palindrom615@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   palindrom615's blog
+lang: KR
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://palindrom615.dev" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: palindrom615
