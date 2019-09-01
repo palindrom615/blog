@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "My RustConf 2018 Closing Keynote 번역"
+title: "[번역] My RustConf 2018 Closing Keynote"
 tags: [rust, 러스트, ECS, 게임개발]
-excerpt: "[번역]rust로 해보는 게임 개발, 그리고 ECS"
+excerpt: "RustConf 2018에서 Catherine West가 발표한 rust로 해보는 게임 개발, 그리고 ECS에 관한 글의 번역입니다."
 ---
 
 원문: [https://kyren.github.io/2018/09/14/rustconf-talk.html](https://kyren.github.io/2018/09/14/rustconf-talk.html)
