@@ -65,7 +65,7 @@ GEM
     mime-types (3.2.2)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2019.0331)
-    mini_magick (4.9.3)
+    mini_magick (4.9.5)
     minima (2.5.1)
       jekyll (>= 3.5, < 5.0)
       jekyll-feed (~> 0.9)
