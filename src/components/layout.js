@@ -2,6 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 
 import { rhythm, scale } from "../utils/typography"
+import Footer from "./footer"
 
 class Layout extends React.Component {
   render() {
@@ -60,19 +61,15 @@ class Layout extends React.Component {
           padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
         }}
       >
-        <header style={{display: "flex", flexDirection: "column"}}>
-          <p style={{marginLeft: "auto"}}>
+        <header style={{ display: "flex", flexDirection: "column" }}>
+          <p style={{ marginLeft: "auto" }}>
             <Link to={`/about`}>about</Link>{" "}
             <Link to={`/disclaimer`}>disclaimer</Link>
           </p>
           {header}
         </header>
         <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
+        <Footer />
       </div>
     )
   }

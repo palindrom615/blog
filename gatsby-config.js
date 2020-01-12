@@ -6,6 +6,8 @@ module.exports = {
     siteUrl: `https://palindrom615.dev`,
     social: {
       twitter: `palindrom615`,
+      github: `palindrom615`,
+      linkedin: `palindrom615`
     },
   },
   plugins: [
