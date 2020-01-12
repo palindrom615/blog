@@ -324,7 +324,7 @@ fn main() {
 
 겉에서 보면 명시적인 "객체"가 튀어나오는 객체 지향은 개임개발에 딱인 것처럼 보입니다. starbound를 예로 들어보면 "플레이어", "NPC", "몬스터" 등은 우리 게임에 객체로 쓰기 쉬운 컨셉입니다. 여기서 시작해 볼까요.여기다 마리오 64처럼 "월드" 클래스를 붙여서 맵의 구조를 만들어 봅시다 (핵심에 집중하기 위해 인터페이스나 메뉴는 뺍시다). Rust로 구현하기 힘드니까 C++로 해봅시다.
 
-```c++
+```cpp
 typedef uint32_t EntityId;
 
 enum class HumanoidAnimationState { ... };
@@ -398,7 +398,7 @@ struct World {
 
 데이터 타입에 겹치는 구조가 많으니 서브 객체로 만들어 봅시다.
 
-```c++
+```cpp
 typedef uint32_t EntityId;
 
 enum class HumanoidAnimationState { ... };
@@ -467,7 +467,7 @@ struct World {
 
 아직까지 그렇게 나빠보이진 않습니다. 그렇지만 이건 그냥 자료 구조를 서술해 놓은 것일 뿐입니다. 객체지향 원칙중 캡슐화에서는 각 구조(이제 클래스라고 불러야겠네요)의 최소한의 인터페이스와 최소한의 메소드만 노출시켜야 합니다. 또 월드 클래스 안에 보이드 포인터가 있는데 그러면 안되겠죠. 우리 엔티티들의 인터페이스를 만들어서 집어넣어 봅시다.
 
-```c++
+```cpp
 typedef uint32_t EntityId;
 
 // 엔티티에서 사용하기 위해 일단 선언
@@ -573,7 +573,7 @@ struct World {
 
 몬스터가 플레이어를 따라가야 한다고 칩시다. 월드를 뒤져서 플레이어들의 엔티티를 찾아내고, 거리에 따라 정렬하고 (실제론 spatial hash나 kd-tree를 사용하겠죠) 가장 가까운 플레이어를 추적하겠죠. 이걸로도 구현할 수 있을 겁니다! 가장 피가 낮은 플레이어를 추적해야 한다는 새 요구사항이 생기면 어떨까요? 이런, 플레이어의 피는 프라이빗이기 때문에 퍼블릭 접근자를 만들어야 겠네요.
 
-```c++
+```cpp
 class Player : Entity {
 public:
     Vec2F position() const override;
@@ -593,7 +593,7 @@ private:
 
 새 요구 사항이 생겼습니다. "운영자" 플레이어는 쫓아가면 안됩니다. 새 접근자를 추가합시다!
 
-```c++
+```cpp
 class Player : Entity {
 public:
     Vec2F position() const override;
@@ -612,7 +612,7 @@ private:
 
 아직 데미지는 구현 안한 채로 작은 프로토타입을 만들었으니 이제 데미지를 구현해봅시다. 음, 데미지 시스템은 어디에 달아야 하죠? 아마 플레이어 객체가 직접 자기 피를 닳게 만들어야 할 겁니다. *자신의* 피니까요... 아니면 몬스터에 달아야 하나요? *자신의* 데미지 범위니까요. 모르겠습니다. 플레이어에 단다고 칩시다. 몬스터의 데미지 범위에 새 접근자를 만들어야겠군요.
 
-```c++
+```cpp
 class Monster : Entity {
 public:
     Vec2F position() const override;
@@ -642,7 +642,7 @@ private:
 
 좋아요, C++에는 많은 단점이 있고 내가 어떤 결론을 내릴 지 미리 말했죠(ECS 쓰세요!). 이런 식으로 게임을 만들 **수는** 있습니다. 많은 문제가 생기고 구멍투성이에 결국은 거대한 객체들로 남겠죠. starbound에서 현재 사용하는 버전의 실제 Player 객체를 봅시다.
 
-```c++
+```cpp
 class Player :
   public virtual ToolUserEntity,
   public virtual LoungingEntity,
@@ -1014,7 +1014,7 @@ Player에 필드보다 메소드가 더 많다는게 재미있죠. 게임 하나
 
 c++가 단점이 있긴 하지만 모든 게임들이 starbound처럼 일시적인 기능이 많진 않을 겁니다. 이건 그냥 극단적인 예이고 보통은 그렇게까지 나쁘지 않을 수도 있지 않을까요? rust로 하면 어떻게 되는지 한번 봅시다! *시작하자마자* 뭔가 어려워집니다. 객체지향에서 가장 간단한 C++코드로 돌아가 봅시다.
 
-```c++
+```cpp
 // typedefs...
 
 class Entity {
@@ -1077,7 +1077,7 @@ pub struct World {
 
 계속 해봅시다. 각 엔티티가 태그의 동적인 집합을 갖고 있다고 해봅시다. C++로 구현하면 이렇게 되겠죠.
 
-```c++
+```cpp
 class Entity {
 public:
     virtual Vec2F position() const = 0;
@@ -1087,7 +1087,7 @@ public:
 
 게임을 프로파일링해봤는데 List\<Tag>를 복사하는데 CPU 시간을 너무 많이 집어먹어서 이렇게 바꾸려고 합니다.
 
-```c++
+```cpp
 class Entity {
 public:
     virtual Vec2F position() const = 0;
@@ -1145,7 +1145,7 @@ pub trait World {
 
     좀 짓궂은 비교를 해 봅시다. 이 인터페이스
 
-    ```c++
+    ```cpp
     class World {
         List<EntityPtr> entityQuery(RectF const& boundBox) const = 0;
         ...
@@ -1154,7 +1154,7 @@ pub trait World {
 
     와 이 구조체
 
-    ```c++
+    ```cpp
     struct World {
         SpatialHash2D<EntityId, float, EntityPtr> entitySpatialMap;
         ...
@@ -1485,7 +1485,7 @@ Rust 커뮤니티에서는 어떤지 모르겠지만 게임 개발 쪽에서는 
 
 Vec 내부에 엔티티를 저장하고 확인하는데 `EntityIndex`를 사용했죠. 위의 C++ 미니 스타바운드 예제에서도 엔티티를 저장하는데 증가하는 integer 인 `EntityId`를 사용했었습니다. 이런 식으로요.
 
-```C++
+```cpp
 HashMap<EntityId, shared_ptr<Entity>> entities;
 ```
 

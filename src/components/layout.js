@@ -60,7 +60,13 @@ class Layout extends React.Component {
           padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
         }}
       >
-        <header>{header}</header>
+        <header style={{display: "flex", flexDirection: "column"}}>
+          <p style={{marginLeft: "auto"}}>
+            <Link to={`/about`}>about</Link>{" "}
+            <Link to={`/disclaimer`}>disclaimer</Link>
+          </p>
+          {header}
+        </header>
         <main>{children}</main>
         <footer>
           © {new Date().getFullYear()}, Built with
