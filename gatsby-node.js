@@ -64,6 +64,14 @@ exports.createPages = async ({ graphql, actions }) => {
       isPermanent: true,
       redirectInBrowser: true,
     })
+    createRedirect({
+      fromPath: `/${post.node.frontmatter.date.replace(/-/g, "/")}/${
+        post.node.fields.slug.replace(/\//g, "")
+      }.html`,
+      toPath: post.node.fields.slug,
+      isPermanent: true,
+      redirectInBrowser: true,
+    })
     createPage({
       path: post.node.fields.slug.replace(/\//g, ""),
       component: blogPost,
