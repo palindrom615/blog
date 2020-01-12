@@ -7,6 +7,7 @@ import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
 
 import "katex/dist/katex.min.css"
+import Utterances from "../components/utterances"
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -47,6 +48,7 @@ class BlogPostTemplate extends React.Component {
             }}
           />
           <footer>
+            <Utterances repo="palindrom615/blog" />
             <Bio />
           </footer>
         </article>
