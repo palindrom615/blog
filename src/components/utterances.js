@@ -23,9 +23,6 @@ const Utterances = ({ repo }) => {
     })
 
     containerRef.current.appendChild(utterances)
-    return () => {
-      containerRef.current.removeChild(utterances)
-    }
   }, [repo])
 
   return <div ref={containerRef} />
