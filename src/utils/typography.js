@@ -14,7 +14,7 @@ funstonTheme.headerFontFamily = [
   "Black Han Sans",
   ...funstonTheme.headerFontFamily,
 ]
-funstonTheme.bodyFontFamily = ["Jeju Gothic", ...funstonTheme.bodyFontFamily]
+funstonTheme.bodyFontFamily = ["Jeju Myeongjo", ...funstonTheme.bodyFontFamily]
 
 const typography = new Typography(funstonTheme)
 
