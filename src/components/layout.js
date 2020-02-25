@@ -34,12 +34,7 @@ class Layout extends React.Component {
       )
     } else {
       header = (
-        <h3
-          style={{
-            fontFamily: `sans-serif`,
-            marginTop: 0,
-          }}
-        >
+        <h3>
           <Link
             style={{
               boxShadow: `none`,

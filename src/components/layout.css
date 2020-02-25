@@ -3,3 +3,8 @@
 * {
   word-break: keep-all;
 }
+
+a {
+  text-decoration: underline solid;
+  text-decoration-thickness: 2px;
+}
