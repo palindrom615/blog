@@ -6,7 +6,7 @@ import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
 
 import "katex/dist/katex.min.css"
-import Utterances from "../components/utterances"
+import Utterances from "react-utterances"
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -47,7 +47,7 @@ class BlogPostTemplate extends React.Component {
               marginBottom: rhythm(1),
             }}
           />
-          <Utterances repo="palindrom615/blog" />
+          <Utterances repo="palindrom615/blog" type="pathname" />
         </article>
 
         <nav>
