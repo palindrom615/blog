@@ -9,6 +9,7 @@ module.exports = {
       github: `palindrom615`,
       linkedin: `palindrom615`,
     },
+    image: "",
   },
   plugins: [
     {

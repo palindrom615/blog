@@ -12,7 +12,10 @@ class PageTemplate extends React.Component {
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <SEO title={post.frontmatter.title} />
+        <SEO
+          title={post.frontmatter.title}
+          lang={post.frontmatter.lang}
+        />
         <article>
           <header>
             <h1
@@ -20,9 +23,9 @@ class PageTemplate extends React.Component {
                 marginTop: rhythm(1),
                 marginBottom: 0,
               }}
-              >
-                {post.frontmatter.title}
-              </h1>
+            >
+              {post.frontmatter.title}
+            </h1>
           </header>
           <section dangerouslySetInnerHTML={{ __html: post.html }} />
           <hr
