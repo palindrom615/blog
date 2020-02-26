@@ -8,11 +8,10 @@ const typography = new Typography({
     {
       name: "Black Han Sans",
       styles: ["400"],
-    },
-    ...funstonTheme.googleFonts,
+    }
   ],
-  headerFontFamily: ["Black Han Sans", ...funstonTheme.headerFontFamily],
-  bodyFontFamily: ["Jeju Myeongjo", ...funstonTheme.bodyFontFamily],
+  headerFontFamily: ["Black Han Sans", 'sans-serif'],
+  bodyFontFamily: ["Jeju Myeongjo", 'serif'],
 })
 
 // Hot reload typography in development.
