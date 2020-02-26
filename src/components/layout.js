@@ -4,6 +4,7 @@ import { Link } from "gatsby"
 import { rhythm, scale } from "../utils/typography"
 import Footer from "./footer"
 import "./layout.css"
+import Head from "./head"
 
 class Layout extends React.Component {
   render() {
@@ -57,6 +58,7 @@ class Layout extends React.Component {
           padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
         }}
       >
+        <Head/>
         <header style={{ display: "flex", flexDirection: "column" }}>
           <p style={{ marginLeft: "auto" }}>
             <Link to={`/about`}>about</Link>{" "}
