@@ -24,6 +24,7 @@
     "gatsby-remark-prismjs": "^3.3.25",
     "gatsby-remark-responsive-iframe": "^2.2.28",
     "gatsby-remark-smartypants": "^2.1.17",
+    "gatsby-remark-video": "^1.2.5",
     "gatsby-source-filesystem": "^2.1.40",
     "gatsby-transformer-remark": "^2.6.48",
     "gatsby-transformer-sharp": "^2.3.14",
@@ -53,7 +54,7 @@
   },
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop",
+    "develop": "gatsby develop --host=0.0.0.0",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",

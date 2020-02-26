@@ -7,7 +7,7 @@ module.exports = {
     social: {
       twitter: `palindrom615`,
       github: `palindrom615`,
-      linkedin: `palindrom615`
+      linkedin: `palindrom615`,
     },
   },
   plugins: [
@@ -32,6 +32,18 @@ module.exports = {
             resolve: `gatsby-remark-responsive-iframe`,
             options: {
               wrapperStyle: `margin-bottom: 1.0725rem`,
+            },
+          },
+          {
+            resolve: `gatsby-remark-video`,
+            options: {
+              width: "100%",
+              preload: "auto",
+              muted: true,
+              autoplay: true,
+              playsinline: true,
+              controls: true,
+              loop: true,
             },
           },
           `gatsby-remark-prismjs`,
