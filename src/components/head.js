@@ -9,7 +9,7 @@ const Head = () => {
         rel="stylesheet"
       />
       <link
-        href="https://fonts.googleapis.com/css?family=Black+Han+Sans&display=swap"
+        href="https://fonts.googleapis.com/css?family=Black+Han+Sans&font-display=block"
         rel="stylesheet"
       />
     </Helmet>

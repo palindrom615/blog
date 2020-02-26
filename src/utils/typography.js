@@ -5,8 +5,8 @@ import funstonTheme from "typography-theme-funston"
 const typography = new Typography({
   ...funstonTheme,
   googleFonts: [],
-  headerFontFamily: ["Black Han Sans", "sans-serif"],
-  bodyFontFamily: ["Jeju Myeongjo", "serif"],
+  headerFontFamily: ["Black Han Sans"],
+  bodyFontFamily: ["Jeju Myeongjo"],
 })
 
 // Hot reload typography in development.
