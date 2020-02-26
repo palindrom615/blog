@@ -5,12 +5,15 @@ const Head = () => {
   return (
     <Helmet>
       <link
-        rel="stylesheet"
-        type="text/css"
         href="https://fonts.googleapis.com/earlyaccess/jejumyeongjo.css"
+        rel="stylesheet"
+      />
+      <link
+        href="https://fonts.googleapis.com/css?family=Black+Han+Sans&display=swap"
+        rel="stylesheet"
       />
     </Helmet>
   )
 }
 
-export default Head;
+export default Head

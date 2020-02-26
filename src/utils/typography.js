@@ -4,12 +4,7 @@ import funstonTheme from "typography-theme-funston"
 
 const typography = new Typography({
   ...funstonTheme,
-  googleFonts: [
-    {
-      name: "Black Han Sans",
-      styles: ["400"],
-    },
-  ],
+  googleFonts: [],
   headerFontFamily: ["Black Han Sans", "sans-serif"],
   bodyFontFamily: ["Jeju Myeongjo", "serif"],
 })

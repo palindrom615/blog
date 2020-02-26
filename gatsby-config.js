@@ -81,5 +81,12 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
     `gatsby-plugin-sitemap`,
+    {
+      resolve: `@palindrom615/gatsby-plugin-subfont`,
+      options: {
+        fallback: false,
+        recursive: true,
+      }
+    }
   ],
 }
