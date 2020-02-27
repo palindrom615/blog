@@ -3,10 +3,11 @@ import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { rhythm, scale } from "../utils/typography"
+import { rhythm } from "../utils/typography"
 
 import "katex/dist/katex.min.css"
 import Utterances from "react-utterances"
+import PostHeader from "../components/postHeader"
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -22,25 +23,7 @@ class BlogPostTemplate extends React.Component {
           lang={post.frontmatter.lang}
         />
         <article>
-          <header>
-            <h1
-              style={{
-                marginTop: rhythm(1),
-                marginBottom: 0,
-              }}
-            >
-              {post.frontmatter.title}
-            </h1>
-            <p
-              style={{
-                ...scale(-1 / 5),
-                display: `block`,
-                marginBottom: rhythm(1),
-              }}
-            >
-              {post.frontmatter.date}
-            </p>
-          </header>
+          <PostHeader frontmatter={post.frontmatter} />
           <section dangerouslySetInnerHTML={{ __html: post.html }} />
           <hr
             style={{

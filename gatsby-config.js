@@ -92,7 +92,6 @@ const pluginsProd = [
       fallbacks: false,
       inPlace: true,
       inlineCss: false,
-      inputFiles: undefined,
       // FIX: gatsby ssr prevent subfonting per page
       // subsetPerPage: false,
       inputFiles: ["public/**/index.html", "public/404.html"],
