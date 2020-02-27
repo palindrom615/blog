@@ -81,13 +81,18 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
     `gatsby-plugin-sitemap`,
-    // {
-    //   resolve: `@palindrom615/gatsby-plugin-subfont`,
-    //   options: {
-    //     fontDisplay: "block",
-    //     inPlace: true,
-    //     inlineCss: true,
-    //   }
-    // }
+    {
+      resolve: `@palindrom615/gatsby-plugin-subfont`,
+      options: {
+        fontDisplay: "block",
+        fallbacks: false,
+        inPlace: true,
+        inlineCss: false,
+        inputFiles: undefined,
+        // FIX: gatsby ssr prevent subfonting per page
+        // subsetPerPage: false,
+        inputFiles: ["public/**/index.html", "public/404.html"],
+      }
+    }
   ],
 }

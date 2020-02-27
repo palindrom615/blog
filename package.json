@@ -8,7 +8,7 @@
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
   "dependencies": {
-    "@palindrom615/gatsby-plugin-subfont": "^1.1.21",
+    "@palindrom615/gatsby-plugin-subfont": "^2.0.0",
     "gatsby": "^2.18.12",
     "gatsby-image": "^2.2.34",
     "gatsby-plugin-feed": "^2.3.23",
