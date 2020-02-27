@@ -1,4 +1,4 @@
-module.exports = {
+const config = {
   siteMetadata: {
     title: `Jang's Blog`,
     author: `Whemoon Jang`,
@@ -62,7 +62,6 @@ module.exports = {
         trackingId: `UA-136784336-1`,
       },
     },
-    `gatsby-plugin-feed`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-typography`,
@@ -77,22 +76,31 @@ module.exports = {
         name: `markdown-pages`,
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
-    `gatsby-plugin-sitemap`,
-    {
-      resolve: `@palindrom615/gatsby-plugin-subfont`,
-      options: {
-        fontDisplay: "block",
-        fallbacks: false,
-        inPlace: true,
-        inlineCss: false,
-        inputFiles: undefined,
-        // FIX: gatsby ssr prevent subfonting per page
-        // subsetPerPage: false,
-        inputFiles: ["public/**/index.html", "public/404.html"],
-      }
-    }
   ],
 }
+
+const pluginsProd = [
+  `gatsby-plugin-feed`,
+  // this (optional) plugin enables Progressive Web App + Offline functionality
+  // To learn more, visit: https://gatsby.dev/offline
+  `gatsby-plugin-offline`,
+  `gatsby-plugin-sitemap`,
+  {
+    resolve: `@palindrom615/gatsby-plugin-subfont`,
+    options: {
+      fontDisplay: "block",
+      fallbacks: false,
+      inPlace: true,
+      inlineCss: false,
+      inputFiles: undefined,
+      // FIX: gatsby ssr prevent subfonting per page
+      // subsetPerPage: false,
+      inputFiles: ["public/**/index.html", "public/404.html"],
+    },
+  },
+]
+
+if (process.env.NODE_ENV != "development") {
+  config.plugins = config.plugins.concat(pluginsProd)
+}
+module.exports = config
