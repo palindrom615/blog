@@ -1,10 +1,15 @@
-@import './font.css';
+@import "./font.css";
 
 * {
   word-break: keep-all;
 }
 
 a {
-  text-decoration: underline solid;
-  text-decoration-thickness: 2px;
+  text-decoration: none;
+}
+
+code[class*="language-"],
+pre[class*="language-"] {
+  font-size: 0.75rem;
+  font-family: 'Cascadia Code', monospace;
 }

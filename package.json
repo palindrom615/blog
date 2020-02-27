@@ -11,10 +11,8 @@
     "@palindrom615/gatsby-plugin-subfont": "^2.0.0",
     "gatsby": "^2.18.12",
     "gatsby-image": "^2.2.34",
-    "gatsby-plugin-feed": "^2.3.23",
     "gatsby-plugin-google-analytics": "^2.1.29",
     "gatsby-plugin-manifest": "^2.2.31",
-    "gatsby-plugin-offline": "^3.0.27",
     "gatsby-plugin-react-helmet": "^3.1.16",
     "gatsby-plugin-sharp": "^2.4.5",
     "gatsby-plugin-sitemap": "^2.2.25",
@@ -39,8 +37,7 @@
     "react-typography": "^0.16.19",
     "react-utterances": "^0.6.4",
     "typography": "^0.16.19",
-    "typography-theme-funston": "^0.16.19",
-    "typography-theme-wordpress-2016": "^0.16.19"
+    "typography-theme-de-young": "^0.16.19"
   },
   "devDependencies": {
     "prettier": "^1.19.1"

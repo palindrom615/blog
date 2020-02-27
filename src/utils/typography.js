@@ -1,11 +1,12 @@
 import Typography from "typography"
-// import Wordpress2016 from "typography-theme-wordpress-2016"
-import funstonTheme from "typography-theme-funston"
+import deyoungTheme from "typography-theme-de-young"
 
 const typography = new Typography({
-  ...funstonTheme,
+  ...deyoungTheme,
+  baseFontSize: '18px',
   googleFonts: [],
   headerFontFamily: ["Black Han Sans"],
+  headerWeight: 400,
   bodyFontFamily: ["Jeju Myeongjo"],
 })
 

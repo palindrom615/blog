@@ -1,14 +1,21 @@
- @font-face {
-    font-family: 'Jeju Myeongjo';
-    font-style: normal;
-    font-weight: 400;
-    font-display: block;
-    src: url(../../static/JejuMyeongjo.otf) format('opentype');
-  }
-  @font-face {
-    font-family: 'Black Han Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-display: block;
-    src: url(../../static/BlackHanSans-Regular.ttf) format('truetype');
-  }
+@font-face {
+  font-family: "Jeju Myeongjo";
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url(../../static/JejuMyeongjo.otf) format("opentype");
+}
+@font-face {
+  font-family: "Black Han Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url(../../static/BlackHanSans-Regular.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Cascadia Code";
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url(../../static/CascadiaMono.ttf) format("truetype");
+}
