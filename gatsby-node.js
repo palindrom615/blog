@@ -23,6 +23,7 @@ exports.createPages = async ({ graphql, actions }) => {
                 title
                 layout
                 date
+                tags
               }
             }
           }
@@ -60,14 +61,6 @@ exports.createPages = async ({ graphql, actions }) => {
       fromPath: `/${post.node.frontmatter.date.replace(/-/g, "/")}/${
         post.node.fields.slug.replace(/\//g, "")
       }`,
-      toPath: post.node.fields.slug,
-      isPermanent: true,
-      redirectInBrowser: true,
-    })
-    createRedirect({
-      fromPath: `/${post.node.frontmatter.date.replace(/-/g, "/")}/${
-        post.node.fields.slug.replace(/\//g, "")
-      }.html`,
       toPath: post.node.fields.slug,
       isPermanent: true,
       redirectInBrowser: true,
