@@ -3,7 +3,7 @@ const config = {
     title: `Jang's Blog`,
     author: `Whemoon Jang`,
     description: `palindrom615's blog`,
-    siteURL: `https://palindrom615.dev`,
+    siteUrl: `https://palindrom615.dev`,
     social: {
       twitter: `palindrom615`,
       github: `palindrom615`,

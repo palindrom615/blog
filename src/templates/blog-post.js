@@ -21,7 +21,7 @@ class BlogPostTemplate extends React.Component {
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
           lang={post.frontmatter.lang}
-          url={site.siteMetadata.siteURL + slug}
+          url={site.siteMetadata.siteUrl + slug}
         />
         <article>
           <PostHeader frontmatter={post.frontmatter} />
@@ -75,7 +75,7 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
-        siteURL
+        siteUrl
       }
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {
