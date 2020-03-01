@@ -25,7 +25,10 @@ class BlogPostTemplate extends React.Component {
         />
         <article>
           <PostHeader frontmatter={post.frontmatter} />
-          <section dangerouslySetInnerHTML={{ __html: post.html }} />
+          <section
+            dangerouslySetInnerHTML={{ __html: post.html }}
+            style={{ display: "flex", flexDirection: "column" }}
+          />
           <hr
             style={{
               marginBottom: rhythm(1),
