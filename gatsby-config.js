@@ -3,7 +3,7 @@ const config = {
     title: `Jang's Blog`,
     author: `Whemoon Jang`,
     description: `palindrom615's blog`,
-    siteUrl: `https://palindrom615.dev`,
+    siteURL: `https://palindrom615.dev`,
     social: {
       twitter: `palindrom615`,
       github: `palindrom615`,
@@ -89,7 +89,7 @@ const pluginsProd = [
       inPlace: true,
       inlineCss: false,
       // FIX: gatsby ssr prevent subfonting per page
-      // subsetPerPage: false,
+      subsetPerPage: false,
       inputFiles: ["public/**/index.html", "public/404.html"],
     },
   },

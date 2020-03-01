@@ -11,9 +11,9 @@ import PostHeader from "../components/postHeader"
 
 class BlogPostTemplate extends React.Component {
   render() {
-    const post = this.props.data.markdownRemark
-    const siteTitle = this.props.data.site.siteMetadata.title
-    const { previous, next } = this.props.pageContext
+    const { markdownRemark: post, site } = this.props.data
+    const siteTitle = site.siteMetadata.title
+    const { previous, next, slug } = this.props.pageContext
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -21,6 +21,7 @@ class BlogPostTemplate extends React.Component {
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
           lang={post.frontmatter.lang}
+          url={site.siteMetadata.siteURL + slug}
         />
         <article>
           <PostHeader frontmatter={post.frontmatter} />
@@ -71,6 +72,7 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        siteURL
       }
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {
