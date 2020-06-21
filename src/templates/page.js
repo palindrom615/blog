@@ -7,7 +7,7 @@ import { rhythm } from "../utils/typography"
 
 class PageTemplate extends React.Component {
   render() {
-    const post = this.props.data.markdownRemark
+    const post = this.props.data.mdx
     const siteTitle = this.props.data.site.siteMetadata.title
 
     return (
@@ -27,7 +27,7 @@ class PageTemplate extends React.Component {
               {post.frontmatter.title}
             </h1>
           </header>
-          <section dangerouslySetInnerHTML={{ __html: post.html }} />
+          <section dangerouslySetInnerHTML={{ __html: post.body }} />
           <hr
             style={{
               marginBottom: rhythm(1),
@@ -48,9 +48,9 @@ export const pageQuery = graphql`
         title
       }
     }
-    markdownRemark(fields: { slug: { eq: $slug } }) {
+    mdx(fields: { slug: { eq: $slug } }) {
       id
-      html
+      body
       frontmatter {
         title
       }
