@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 
-const AA = ({ r, location }) => {
+const TypographyCard = ({ r, location }) => {
   const [img, setImg] = useState("")
   useEffect(() => {
     import(`${location}/${r.journal}-type.png`).then((v) => {
@@ -46,4 +46,4 @@ const AA = ({ r, location }) => {
   )
 }
 
-export default AA
+export default TypographyCard

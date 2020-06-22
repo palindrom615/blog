@@ -1,0 +1,92 @@
+[
+  {
+    "journal": "usatoday",
+    "site": "https://www.usatoday.com/story/news/health/2020/05/24/coronavirus-news-veterans-who-died-covid-19-honored-photos/5243891002/",
+    "txt": "Health officials, including the commissioner of the FDA, urged caution Sunday as millions of Americans were beginning to emerge from stay-at-home orders and get together with friends and family on the Memorial Day weekend.",
+    "fontSize": "16.0909px",
+    "fontFamily": "\"unify serif\", Georgia, TimesNewRoman, \"times new roman\", Times, serif",
+    "lineHeight": "25.7455px",
+    "letterSpacing": "normal",
+    "wordSpacing": "0px"
+  },
+  {
+    "journal": "wsj",
+    "site": "https://www.wsj.com/articles/u-s-marks-memorial-day-weekend-as-coronavirus-death-toll-nears-100-000-11590312043?mod=mhp",
+    "txt": "The U.S. government said it is imposing new travel restrictions on Brazil as Covid-19 cases there have risen sharply, while the coronavirus-related death toll at home was approaching 100,000 over the Memorial Day holiday weekend. ",
+    "fontSize": "17px",
+    "fontFamily": "Exchange",
+    "lineHeight": "27px",
+    "letterSpacing": "normal",
+    "wordSpacing": "0px"
+  },
+  {
+    "journal": "nyt",
+    "site": "https://www.nytimes.com/2020/05/24/us/politics/trump-2020-election-voting-rights.html?action=click&module=Top%20Stories&pgtype=Homepage",
+    "txt": "A group of worst-case scenario planners — mostly Democrats, but also some anti-Trump Republicans — have been gaming out how to respond to various doomsday options for the 2020 presidential election.",
+    "fontSize": "20px",
+    "fontFamily": "nyt-cheltenham, georgia, \"times new roman\", times, serif",
+    "lineHeight": "25px",
+    "letterSpacing": "normal",
+    "wordSpacing": "0px"
+  },
+  {
+    "journal": "lat",
+    "site": "https://www.latimes.com/california/story/2020-05-23/l-a-county-reports-progress-in-coronavirus-fight-as-hospitalizations-drop-fewer-people-test-positive",
+    "txt": "“Thanks to everyone’s efforts, our data points to steady declines in hospitalizations, deaths and the percent of people testing positive,” Barbara Ferrer, the county health director, said Saturday in a statement.",
+    "fontSize": "18px",
+    "fontFamily": "Georgia, \"times new roman\", times, serif",
+    "lineHeight": "31px",
+    "letterSpacing": "normal",
+    "wordSpacing": "0px"
+  },
+  {
+    "journal": "nypost",
+    "site": "https://nypost.com/2020/05/24/swim-party-contributes-to-second-peak-in-arkansas-coronavirus/",
+    "txt": "“During this Memorial (Day) weekend, we want to be out and we want to enjoy ourselves, we want to remember this holiday and those that have served our country and given their lives in service of our country.",
+    "fontSize": "18px",
+    "fontFamily": "proxima-nova, sans-serif",
+    "lineHeight": "26px",
+    "letterSpacing": "normal",
+    "wordSpacing": "0px"
+  },
+  {
+    "journal": "nydaily",
+    "site": "https://www.nydailynews.com/coronavirus/ny-coronavirus-20200523-4un7kk74x5a23pmtjfyq45mmo4-story.html",
+    "txt": " The City Council wants you to be able to do more than dip your feet in the water at the beach.",
+    "fontSize": "17px",
+    "fontFamily": "\"PT Serif\", serif",
+    "lineHeight": "28px",
+    "letterSpacing": "normal",
+    "wordSpacing": "0px"
+  },
+  {
+    "journal": "wp",
+    "site": "https://www.washingtonpost.com/politics/the-pandemic-has-already-altered-how-tens-of-millions-of-americans-can-cast-their-ballots-this-year/2020/05/23/0e3c3bf8-9532-11ea-91d7-cf4423d47683_story.html?hpid=hp_hp-banner-main_virusvoting740pm%3Ahomepage%2Fstory-ans&itid=hp_hp-banner-main_virusvoting740pm%3Ahomepage%2Fstory-ans",
+    "txt": " pandemic is rapidly transforming this year’s elections, changing the way tens of millions of people cast ballots and putting thousands of election officials at the center of a pitched political fight as they rush to adapt with limited time and funding.",
+    "fontSize": "18px",
+    "fontFamily": "georgia, \"Times New Roman\", serif",
+    "lineHeight": "31.5px",
+    "letterSpacing": "normal",
+    "wordSpacing": "0px"
+  },
+  {
+    "journal": "tribune",
+    "site": "https://www.chicagotribune.com/politics/ct-chicago-casino-legislation-20200523-c5sem6ajmrgspme53h2mzgo4gy-story.html",
+    "txt": " “This moment is decades in the making and represents a critical step toward shoring up our city’s pension obligations, as well as driving huge levels of infrastructure funding and fueling thousands of new jobs for all of Illinois,” Lightfoot said in a statement.",
+    "fontSize": "18px",
+    "fontFamily": "Georgia, serif",
+    "lineHeight": "28px",
+    "letterSpacing": "normal",
+    "wordSpacing": "0px"
+  },
+  {
+    "journal": "azcentral",
+    "site": "https://www.azcentral.com/story/news/local/arizona-wildfires/2020/05/23/5-juveniles-suspected-starting-park-fire-bagdad/5251919002/",
+    "txt": "According to officials with the Yavapai County Sheriff's Office, the five juveniles ranging in age from 11 to 15 were smoking on state land nearby during a fire ban, which sparked the fire.",
+    "fontSize": "16.0909px",
+    "fontFamily": "\"unify serif\", Georgia, TimesNewRoman, \"times new roman\", Times, serif",
+    "lineHeight": "25.7455px",
+    "letterSpacing": "normal",
+    "wordSpacing": "0px"
+  }
+]

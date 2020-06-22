@@ -1,0 +1,402 @@
+[
+  {
+    "journal": "경향신문",
+    "site": "https://m.khan.co.kr/view.html?art_id=202005241133001",
+    "txt": "지난 23일 노무현 전 대통령 서거 11주기를 맞아 경남 김해 봉하마을에 여권 인사 100여명이 총집결했다. 노 전 대통령을 기리는 ‘추모의 언어’에 담긴 함의를 통해 오는 30일 개원하는 21대 국회와 문재인 정권 후반기 정치권의 기상도를 짚어봤다.",
+    "fontSize": "16px",
+    "fontFamily": "Helvetica-light, AppleSDGothicNeo-Light, \"Noto Sans\", Roboto-Light, \"Malgun Gothic\", \"맑은 고딕\", Dotum, 돋움, sans-serif",
+    "lineHeight": "25.6px",
+    "letterSpacing": "-0.4px",
+    "wordSpacing": "0px"
+  },
+  {
+    "journal": "국민일보",
+    "site": "http://m.kmib.co.kr/view.asp?arcid=0014613117&code=61121111&sid1=soc",
+    "txt": "오전 8시30분부터 업무를 시작하는 정 본부장은 총리가 이끄는 중앙재난대책본부와 방대본 회의, 양쪽 합동회의, 지방자치단체와의 회의 등 하루 3~4건 이상의 회의와 업무보고를 소화하고 있다. 저녁식사 전후에 열리는 방대본 자체회의로 하루 일과를 마무리한다.",
+    "fontSize": "16px",
+    "fontFamily": "\"Apple SD Gothic Neo\", \"Malgun Gothic\", \"맑은 고딕\", \"Noto Sans Kr\", \"Apple SD Gothic Neo\", \"Malgun Gothic\", dotum, 돋움, tahoma, sans-serif",
+    "lineHeight": "24px",
+    "letterSpacing": "normal",
+    "wordSpacing": "0px"
+  },
+  {
+    "journal": "노컷뉴스",
+    "site": "https://m.nocutnews.co.kr/news/5348747",
+    "txt": "또한, 아프리카TV 등에서 오랜 기간 인터넷 방송을 해온 B씨는 아프리카TV, 유튜브 등에서 활동하며, SNS계정 팔로워도 20만명에 달한다. B씨는 구글 광고소득을 신고하는 과정에서 1만달러 이하 소액은 소득세 신고 과정에서 누락했다. ",
+    "fontSize": "18.72px",
+    "fontFamily": "\"맑은 고딕\", \"Malgun Gothic\", 돋움, Dotum, 굴림, Gulim, Helvetica, sans-serif",
+    "lineHeight": "28.08px",
+    "letterSpacing": "-1px",
+    "wordSpacing": "0px"
+  },
+  {
+    "journal": "뉴데일리",
+    "site": "http://www.newdaily.co.kr/site/data/html/2020/05/24/2020052400023.html",
+    "txt": "방송은 \"국가 무력 건설과 발전의 총적 요구에 따라 나라의 핵전쟁 억제력을 한층 강화하고 전략 무력을 고도의 격동상태에서 운영하기 위한 새로운 방침들이 제시됐다\"며 \"조선인민군 포병의 화력타격능력을 결정적으로 높이는 중대 조치도 취해졌다\"고 보도했다. 다만 구체적인 내용은 언급하지 않았다.",
+    "fontSize": "17px",
+    "fontFamily": "\"맑은 고딕\", AppleSDGothicNeo-Regular, \"맑은 고딕\", \"Malgun Gothic\"",
+    "lineHeight": "28.9px",
+    "letterSpacing": "normal",
+    "wordSpacing": "0px"
+  },
+  {
+    "journal": "뉴스타파",
+    "site": "https://newstapa.org/article/5MKIu",
+    "txt": "‘모바일 서포터’는 이 510명 안에는 포함되지 않는다. 하지만 KT링커스 사원증을 달고 일한다. 고객의 집을 방문해 고장 난 KT휴대폰을 가져가 AS센터에 맡기고, 중고 휴대폰을 물류센터로 옮기는 배송 업무 등을 맡고 있다.",
+    "fontSize": "16px",
+    "fontFamily": "\"Noto Sans KR\", sans-serif",
+    "lineHeight": "24.96px",
+    "letterSpacing": "normal",
+    "wordSpacing": "0px"
+  },
+  {
+    "journal": "뉴시스",
+    "site": "https://mobile.newsis.com/view.html?ar_id=NISX20200524_0001035097&cID=&pID=00",
+    "txt": "[서울·세종=뉴시스] 이연희 김정현 기자 = 교육부가 6월까지 신종 코로나바이러스 감염증(코로나19) 지역사회 감염 우려가 높은 지역의 중·고등학생이 교내 등교 인원이 전체 학생의 3분의 2를 넘지 않도록 할 것을 권고했다. 수도권과 대구, 경북 구미 등 아직 코로나19 지역사회 감염 우려가 여전한 지역이 있는 만큼 3개 학년이 하루에 몰리지 않도록 조정하라는 지침이다.",
+    "fontSize": "16.065px",
+    "fontFamily": "돋움, Dotum, 굴림, Gulim, Helvetica, sans-serif",
+    "lineHeight": "25.704px",
+    "letterSpacing": "-0.25px",
+    "wordSpacing": "3px"
+  },
+  {
+    "journal": "데일리안",
+    "site": "https://www.dailian.co.kr/mobile/news/view/892210",
+    "txt": "민주당 내 청와대 출신 당선자는 총 18명이다. 일자리 수석 출신 정태호 당선자, 정무수석 출신 한병도 당선자, 국민소통수석 출신 윤영찬 당선자 시민사회수석 출신 이용선 당선자 등 수석급이 4명이고, 윤건영·고민정·김영배·진성준·민형배·신정훈 등 비서관 출신 당선자들이 6명이다. 박영순·문정복·이장섭·이원택·한준호·윤영덕·김승원·박상혁 등 행정관 출신 당선자 등 8명이다.",
+    "fontSize": "22.3333px",
+    "fontFamily": "\"Noto Sans KR regular\", sans-serif",
+    "lineHeight": "normal",
+    "letterSpacing": "normal",
+    "wordSpacing": "0px"
+  },
+  {
+    "journal": "동아일보",
+    "site": "https://www.donga.com/news/Inter/article/all/20200524/101189408/1?ref=main",
+    "txt": "  NYT는 이 지면에서 ‘미국 사망자 10만 명, 헤아릴 수 없는 손실’이라는 헤드라인과 ‘이들은 단지 명단 속의 이름이 아니다, 이들은 바로 우리’라는 부제를 달았다. 부고는 미국 내 최초의 코로나19 사망자 패트리샤 다우드로 시작한다. 각각의 이름 뒤에는 ‘웃음이 많았던 증조할머니’, ‘신혼을 즐길 시간이 거의 없었던 아내’와 같은 짧은 설명이 달렸다.",
+    "fontSize": "17px",
+    "fontFamily": "HelveticaNeue-Light, AppleSDGothicNeo-Light, sans-serif",
+    "lineHeight": "26.52px",
+    "letterSpacing": "-0.3px",
+    "wordSpacing": "0px"
+  },
+  {
+    "journal": "디지털타임스",
+    "site": "http://m.dt.co.kr/contents.html?article_no=2020052502100351062001",
+    "txt": "\n동익네(10분위 가구)는 '호화 집콕 생활'을 택했을 공산이 크다. 근로소득은 모든 계층을 통틀어 가장 많이 늘었지만, 코로나19 탓에 여가생활이나 비(非)생필품 지출을 자연스레 줄였다.",
+    "fontSize": "17px",
+    "fontFamily": "HelveticaNeue, AppleSDGothicNeo, \"Malgun Gothic\", \"맑은 고딕\", Dotum, 돋움, sans-serif",
+    "lineHeight": "25.5px",
+    "letterSpacing": "-0.288px",
+    "wordSpacing": "0px"
+  },
+  {
+    "journal": "마이데일리",
+    "site": "http://m.mydaily.co.kr/new/read.php?newsid=202005222045313449",
+    "txt": "\n이날 집행위원장인 달시 파켓은 \"어려운 상황이 생겨도 포기하지 않고 계속 좋은 영화를 만들었으면 한다\"며 \"특히 올해는 독립영화뿐만 아니라 전세계 영화계가 어려운 상황에 빠졌다. 영화계 준비하면서 고민을 많이 했다. 하지만 이 행사가 매년처럼 진행되면 좋겠다고 생각했다. 다같이 한국 독립영화가 얼마나 소중한지 느끼면 좋겠다\"고 시상식의 포문을 열었다.",
+    "fontSize": "17px",
+    "fontFamily": "\"Nanum Gothic\"",
+    "lineHeight": "26px",
+    "letterSpacing": "normal",
+    "wordSpacing": "0px"
+  },
+  {
+    "journal": "매일경제",
+    "site": "https://m.mk.co.kr/news/economy/view/2020/05/530585/",
+    "txt": "실제로 올해 3월 전년 동기 대비 업종별 체납보험료 추이를 보면 코로나19 충격이 드러난다. 건강보험은 숙박·음식점업 3월 체납률이 30.2%로 급증했다. 2월(21.3%)에 비해 10%포인트 가까이 증가한 것이다. 영업중지 권고를 받은 학원이 모여 있는 교육업종의 건강보험 3월 체납률도 21.5%로 2월(11.6%) 대비 약 10%포인트 늘었다.",
+    "fontSize": "19px",
+    "fontFamily": "\"Malgun Gothic\", dotum, Gulim, Helvetica, Apple-Gothic, sans-serif",
+    "lineHeight": "32px",
+    "letterSpacing": "-0.95px",
+    "wordSpacing": "0px"
+  },
+  {
+    "journal": "머니투데이",
+    "site": "https://m.mt.co.kr/renew/view.html?no=2020052214235482190",
+    "txt": "코스피지수는 3월 19일 –133.56포인트, -8.39% 떨어져 한국거래소 개장 이래 하루 최대 하락폭을 경신했고, 공포지수라 불리는 코스피200 변동성지수는 지수 산출·발표 이래 역대 최고치를 갈아치웠습니다. 한마디로 ‘분위기가 겁나 싸해’였습니다.",
+    "fontSize": "17px",
+    "fontFamily": "Helvetica-light, AppleSDGothicNeo-Light, \"Noto Sans\", Roboto-Light, \"Malgun Gothic\", \"맑은 고딕\", Dotum, 돋움, sans-serif",
+    "lineHeight": "27.999px",
+    "letterSpacing": "-0.28px",
+    "wordSpacing": "2px"
+  },
+  {
+    "journal": "문화일보",
+    "site": "http://m.munhwa.com/mnews/view.html?no=20200524MW075540143906",
+    "txt": "\n보건학자 김승섭 교수는 저서 ‘아픔이 길이 되려면’에서 1994년 하버드대 낸시 크리거 교수의 논문 ‘역학과 원인의 그물망 : 거미를 본 사람이 있는가?’를 이야기합니다. 질병의 원인은 개인만 아니라 사회적, 정치적 이유도 있다는 겁니다. ",
+    "fontSize": "17px",
+    "fontFamily": "\"Malgun Gothic\", \"���� ����\", dotum, ����, sans-serif",
+    "lineHeight": "23.8px",
+    "letterSpacing": "normal",
+    "wordSpacing": "0px"
+  },
+  {
+    "journal": "미디어오늘",
+    "site": "http://www.mediatoday.co.kr/news/articleView.html?idxno=207233",
+    "txt": "물론 중앙일보만 부부의 세계 종영 소식을 다룬 건 아니었다. 서울신문도 18일 26면에 부부의 세계 주인공인 배우 김희애의 소감을 전하는 기사를 배치했다. 같은 날 국민일보도 22면에 “‘부부의 세계’ 신드롬 남기고 종영…英 원작 제작진도 축전”이라는 기사를 실었다.",
+    "fontSize": "18px",
+    "fontFamily": "sans-serif",
+    "lineHeight": "27px",
+    "letterSpacing": "-0.9px",
+    "wordSpacing": "0px"
+  },
+  {
+    "journal": "블로터",
+    "site": "http://www.bloter.net/archives/382430",
+    "txt": "LG전자 폴란드 법인은 동영상 공유 앱 ‘틱톡’ 공식 계정에 V60 씽큐와 듀얼스크린의 기능을 소개한 내용의 영상 광고를 여러 편 올렸다. 이 중 문제가 된 광고는 한 남성이 계단을 올라가는 여성을 불법 촬영하는 내용을 담았다.",
+    "fontSize": "16px",
+    "fontFamily": "\"Nanum Barun Gothic Regular\"",
+    "lineHeight": "28.8px",
+    "letterSpacing": "normal",
+    "wordSpacing": "0px"
+  },
+  {
+    "journal": "서울경제",
+    "site": "https://m.sedaily.com/NewsView/1Z2VJ1J41K",
+    "txt": "24일 서울경제 취재에 따르면 지난해 6월 25일 정의연 홈페이지에 게재된 우간다 김복동 센터 도면은 단순 건물배치도로 실제 건축에 필요한 ‘마스터플랜’은 11월 착공식 당시까지도 만들어지지 않은 것으로 확인됐다. 정의연이 홈페이지에 공개한 우간다 김복동 센터 설립계획에는 부지매입과 건물건축, 내부설비·시설공사 등에 필요한 2억원의 예산안, 공간구성계획 등과 함께 397㎡(약 380평) 크기의 부지와 도면도 공개해놨다.",
+    "fontSize": "17px",
+    "fontFamily": "notokr-regular, Dotum, Arial, sans-serif",
+    "lineHeight": "28.05px",
+    "letterSpacing": "normal",
+    "wordSpacing": "0px"
+  },
+  {
+    "journal": "서울신문",
+    "site": "http://m.seoul.co.kr/news/newsView.php?id=20200525001002&cp=seoul&m_sub=msub_seoul_111&wlog_tag1=mb_seoul_from_index",
+    "txt": "24일 서울신문과 한국매니페스토실천운동본부가 공동 기획한 ‘시도지사 및 교육감 공약 이행 및 정보공개 평가’ 결과 전국 시도지사들이 내놓은 공약 총 2614개 중 완료는 179개, 이행 후 계속 추진은 793개로 전체 이행률은 37.2%인 것으로 집계됐다. 4년 전 민선 6기 중간 평가 때의 이행률 39.2%와 비교하면 2.0% 포인트 낮다.",
+    "fontSize": "18px",
+    "fontFamily": "돋움, dotum",
+    "lineHeight": "28.8px",
+    "letterSpacing": "normal",
+    "wordSpacing": "0px"
+  },
+  {
+    "journal": "세계일보",
+    "site": "http://m.segye.com/view/20200524505973",
+    "txt": "24일 청와대에 따르면 문 대통령은 국회를 찾아 21대 국회 개원을 기념하는 연설을 하기로 하고 현재 보좌진의 도움을 받아 연설문을 준비 중이다. 청와대 관계자는 “이번 국회가 갖는 의미는 남다르다”며 “국난 위기 앞에서 신뢰받는 국회의 필요성이 요구되는 만큼 대통령이 직접 개원 연설을 하기로 했다”고 설명했다.",
+    "fontSize": "18px",
+    "fontFamily": "MalgunGothic, \"Malgun Gothic\", HelveticaNeue, AppleSDGothicNeo, sans-serif",
+    "lineHeight": "28px",
+    "letterSpacing": "0.2px",
+    "wordSpacing": "0px"
+  },
+  {
+    "journal": "시사인",
+    "site": "https://www.sisain.co.kr/news/articleView.html?idxno=41965",
+    "txt": "2001년 조울병이 발병했고 2006년 재발했다. 두 차례 입원했고 그사이 몇 번의 파도를 넘었다. 그는 조울병을 경험하며 많은 일기와 메모를 남겼다. ‘아무것도 쓰지 않는다면 광기의 절벽으로 떨어질까 봐 무서워서, 나의 말을 영원히 잃어버릴까 두려워서 펜을 들었다.’ 그의 책 〈삐삐 언니는 조울의 사막을 건넜어〉는 매우 사적인 기록이지만 조울병 일반에 대한 대중의 이해를 돕는다. 경험했던 감정과 사건을 바탕으로 병의 양상이 어떻게 전개되었는지 기록했다. 조증과 울증을 지날 때 어떤 상태에 놓이는지 상세하게 묘사되어 있다. 빠른 속도로 생각하고 의욕이 과다하며 지나치게 쾌활하고 ‘모든 걸 이해한다는 느낌’의 시기(조증)를 지나 마침내 짙은 우울이 찾아온다.",
+    "fontSize": "19.008px",
+    "fontFamily": "\"Noto Sans KR\", \"Malgun Gothic\", 돋움, dotum, \"Apple SD Gothic Neo\", \"Helvetica Neue\", Helvetica, Roboto, Arial, sans-serif",
+    "lineHeight": "30.888px",
+    "letterSpacing": "-0.9504px",
+    "wordSpacing": "0px"
+  },
+  {
+    "journal": "아시아경제",
+    "site": "https://cm.asiae.co.kr/article/2020052417373203232",
+    "txt": "유은혜 부총리 겸 교육부 장관은 24일 정부서울청사에서 등교수업 추가 지원방안 브리핑을 열고 학교 내 밀집도를 전체 학생의 3분의 2를 넘지 않도록 최소화 하도록 각 시·도교육청에 권고하고 방과후학교 강사나 자원봉사자, 시간강사 3만여명을 배치해 방역활동과 생활지도를 지원하게 한다고 밝혔다.\t",
+    "fontSize": "17px",
+    "fontFamily": "HelveticaNeue-Light, AppleSDGothicNeo-Light, \"Noto Sans\", Roboto-Light, \"Malgun Gothic\", \"맑은 고딕\", Dotum, 돋움, sans-serif",
+    "lineHeight": "29px",
+    "letterSpacing": "normal",
+    "wordSpacing": "0px"
+  },
+  {
+    "journal": "아이뉴스24",
+    "site": "http://m.inews24.com/v/1267344",
+    "txt": "이때부터 본격적으로 추진한 것이 무결점 품질혁신활동인 'GQ-3355(Global Quality-3355)'다. 제품 품질 3년 내 세계 3위, 브랜드 품질 5년 내 세계 5위를 뜻한다.",
+    "fontSize": "18px",
+    "fontFamily": "\"Noto Sans CJK KR Regular\", \"Apple SD Gothic Neo\", Sans-serif, sans-serif, serif, system-ui",
+    "lineHeight": "26px",
+    "letterSpacing": "normal",
+    "wordSpacing": "0px"
+  },
+  {
+    "journal": "연합뉴스",
+    "site": "https://m.yna.co.kr/view/AKR20200524032751530",
+    "txt": " 최근 확진 판정을 받은 대구 달서구 거주 10대 남성은 이태원 클럽 관련 '3차 감염' 사례인 것으로 알려졌지만, 아직 방역당국의 공식 통계에는 반영되지 않았다. ",
+    "fontSize": "17px",
+    "fontFamily": "sans-serif",
+    "lineHeight": "27.54px",
+    "letterSpacing": "normal",
+    "wordSpacing": "0px"
+  },
+  {
+    "journal": "오마이뉴스",
+    "site": "http://m.ohmynews.com/NWS_Web/Mobile/at_pg.aspx?CNTN_CD=A0002643294&CMPT_CD=MTO99",
+    "txt": "\n입국하면 코로나19 진단 검사를 받아야 하고 2주간 자가격리해야 한다는 것은 알고 있었다. 자가격리를 어디서 할 것인지 결정해야 했는데, 어머니가 수술 후 입원하실 테니 어머니 집에서 혼자 지내기로 했다. 주거지가 마땅치 않은 사람들은 정부에서 제공하는 숙소 등으로 가야 한다고 한다.",
+    "fontSize": "16px",
+    "fontFamily": "\"Helvetica Neue\", \"Apple SD Gothic Neo\", sans-serif, Helvetica-light, AppleSDGothicNeo-Light, \"Malgun Gothic\", \"맑은 고딕\", Dotum, 돋움",
+    "lineHeight": "28.8px",
+    "letterSpacing": "-0.64px",
+    "wordSpacing": "0px"
+  },
+  {
+    "journal": "이데일리",
+    "site": "https://m.edaily.co.kr/amp/read?newsId=02043446625772200&mediaCodeNo=257",
+    "txt": "유은혜 부총리 겸 교육부 장관은 24일 오후 정부 서울청사에서 브리핑에서 이러한 내용의 `학교 내 밀집도 최소화 조치 및 교원 업무 부담 경감 방안`을 발표했다. 이번 방안은 오는 27일 고2 학년과 중3, 초등 1~2학년, 유치원 학생이 추가 등교를 함에 따라 보다 철저한 방역 준비와 교원 업무 부담 경감을 위해 마련됐다. ",
+    "fontSize": "16px",
+    "fontFamily": "Roboto, sans-serif",
+    "lineHeight": "25px",
+    "letterSpacing": "normal",
+    "wordSpacing": "0px"
+  },
+  {
+    "journal": "조선일보",
+    "site": "https://m.chosun.com/svc/article.html?sname=news&contid=2020052401911",
+    "txt": "앞서 김정은은 지난해 ‘하노이 노딜’ ‘스톡홀름 노딜’ 이후 미국의 선(先)비핵화·후(後) 제재 해제’라는 기본 원칙을 문제 삼고 ‘새로운 길’을 가겠다며 강경 노선 의지를 드러냈다. 이는 한·미 전문가들 사이에서 김정은이 대륙간탄도미사일(ICBM) 등 초강도 도발을 예고한 것으로 해석됐다.",
+    "fontSize": "17px",
+    "fontFamily": "HelveticaNeue, AppleSDGothicNeo, \"Malgun Gothic\", \"맑은 고딕\", Dotum, 돋움, sans-serif",
+    "lineHeight": "25.5px",
+    "letterSpacing": "-0.288px",
+    "wordSpacing": "0px"
+  },
+  {
+    "journal": "중앙일보",
+    "site": "https://mnews.joins.com/article/23784283?cloc=joongang-mhome-Group1",
+    "txt": "   지금은 민간인인 임종석 전 대통령 비서실장의 발언에 미국 국무부가 이례적으로 논평을 냈다. 임 전 실장이 교착 상태인 남북, 북미 관계를 풀기 위해 “미국에 일부 부정적인 견해가 있어도 문재인 대통령은 일을 만들고 밀고 가려 할 것”이라고 말한 게 발단이다. 이에 미 국무부는 “남북 협력은 비핵화에 발맞춰야 한다”고 입장을 밝혔다.   ",
+    "fontSize": "18px",
+    "fontFamily": "Helvetica-light, AppleSDGothicNeo-Light, \"Noto Sans\", Roboto-Light, \"Malgun Gothic\", \"맑은 고딕\", Dotum, 돋움, sans-serif",
+    "lineHeight": "28.008px",
+    "letterSpacing": "-0.9px",
+    "wordSpacing": "0px"
+  },
+  {
+    "journal": "코리아헤럴드",
+    "site": "http://m.koreaherald.com/view.php?ud=20200524000204",
+    "txt": "North Korean leader Kim Jong-un, reappearing after three weeks out of the public eye, called for stronger “nuclear war deterrence” at a key military meeting, the country’s state media reported Sunday. ",
+    "fontSize": "20px",
+    "fontFamily": "\"Noto Sans KR\"",
+    "lineHeight": "30px",
+    "letterSpacing": "-0.3px",
+    "wordSpacing": "0px"
+  },
+  {
+    "journal": "파이낸셜뉴스",
+    "site": "https://m.fnnews.com/news/202005241752436602",
+    "txt": " 【 베이징=정지우 특파원】 홍콩이 미·중 갈등의 화약고로 떠오르고 있다. 중국의 홍콩 국가보안법 제정 추진에 미국이 홍콩 특별지위 박탈 카드로 제동에 나서면서 양국관계가 살얼음판을 걷고 있다. 홍콩이 특별지위를 잃으면 글로벌 금융허브로서 기능을 상실해 중국 경제에도 타격이 불가피하다.\n",
+    "fontSize": "17px",
+    "fontFamily": "AppleSDGothicNeo-Regular, \"Malgun Gothic\", \"맑은 고딕\", dotum, 돋움, sans-serif",
+    "lineHeight": "27.625px",
+    "letterSpacing": "-0.68px",
+    "wordSpacing": "0px"
+  },
+  {
+    "journal": "프레시안",
+    "site": "https://m.pressian.com/m/pages/articles/2020052417063804969",
+    "txt": "'우산 혁명'의 지도자였던 조슈아 웡은 이날 현장에서 \"북경(중국 지도부)이 국가보안법을 발표할 때가 반격의 때\"라며 국가보안법에 맞서 싸우고 해외 각국의 지원을 받기 위한 활동을 계속하겠다고 말했다.",
+    "fontSize": "16px",
+    "fontFamily": "\"Noto Sans KR\", \"Noto Sans\", \"맑은 고딕\", \"Malgun Gothic\", \"open sans\", Arial, sans-serif",
+    "lineHeight": "25.6px",
+    "letterSpacing": "-0.8px",
+    "wordSpacing": "0px"
+  },
+  {
+    "journal": "한겨레",
+    "site": "http://m.hani.co.kr/arti/international/international_general/946257.html",
+    "txt": "\n중국이 홍콩 내 반정부 활동을 처벌할 수 있는 ‘홍콩 국가보안법’(홍콩 보안법) 제정을 추진하는 데 대해, 홍콩 시민 수천명이 시민 자유를 위협한다며 격렬한 반대 시위를 벌였다. 미국, 영국 등 세계 정치인 180여명은 “일국양제를 훼손하지 말라”며 중국 정부를 비판하는 공동성명을 냈다.",
+    "fontSize": "16.32px",
+    "fontFamily": "HelveticaNeue-Light, AppleSDGothicNeo-Light, sans-serif-light",
+    "lineHeight": "27.744px",
+    "letterSpacing": "normal",
+    "wordSpacing": "0px"
+  },
+  {
+    "journal": "한국경제",
+    "site": "https://www.hankyung.com/economy/article/2020052402761",
+    "txt": "24일 관련 업계에 따르면 화웨이는 지난주 삼성전자·SK하이닉스 중국법인 관계자들을 불러 “미국 정부의 움직임에 관계없이 안정적으로 메모리 반도체를 공급해달라”고 요청한 것으로 알려졌다. 화웨이는 지난해 두 회사의 5대 매출처에 포함된 ‘큰손’이다. 화웨이가 구매하는 한국 업체의 D램·낸드플래시 반도체 규모는 연 10조원 안팎으로 추정된다.",
+    "fontSize": "20px",
+    "fontFamily": "\"Helvetica Neue\", \"Apple SD Gothic Neo\", AppleGothic, \"Droid Sans fallback\", sans-serif",
+    "lineHeight": "29px",
+    "letterSpacing": "normal",
+    "wordSpacing": "0px"
+  },
+  {
+    "journal": "한국일보",
+    "site": "http://m.hankookilbo.com/News/Read/202005241721373763?did=PA&dtype=3&dtypecode=5380",
+    "txt": "2006년 4월부터 5년 간 일본군 위안부 피해자 주거복지시설인 나눔의집에서 연구원으로 활동한 일본인 무라야마 잇페이(村山一兵ㆍ40)씨는 “터질 게 터졌다”고 입을 뗐다. 2011년 초 ‘나눔의집 할머니 인권문제 개선요구서’를 공개해 운영진과 갈등을 겪다가 끝내 해고당한 무라야마씨는 이미 10년 전에 할머니들에 대한 인권침해 의혹 등을 폭로한 내부 고발자였다. 지난해 일본으로 돌아간 무라야마씨는 24일 한국일보와 통화에서 “당시에도 직원들이 지속적으로 개선을 요구했지만 그 동안 바뀐 게 아무 것도 없다는 게 너무 가슴 아프다”고 했다.  ",
+    "fontSize": "17px",
+    "fontFamily": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", \"맑은 고딕\", Helvetica, Arial, sans-serif",
+    "lineHeight": "29px",
+    "letterSpacing": "-0.5px",
+    "wordSpacing": "0px"
+  },
+  {
+    "journal": "jtbc",
+    "site": "http://mnews.jtbc.joins.com/News/Article.aspx?news_id=NB11951850",
+    "txt": "[김문희/고 김완봉 군 동생 : 그 냄새부터 시작해서 오빠 모습을 봤을 때 있을 수가 없어서 밖에 나와 다 토해 버렸거든요. 볼 수가 없더라고요. 너무 무섭고 무서웠어요.]",
+    "fontSize": "18px",
+    "fontFamily": "\"Times New Roman\"",
+    "lineHeight": "30.6px",
+    "letterSpacing": "-1px",
+    "wordSpacing": "0px"
+  },
+  {
+    "journal": "kbs",
+    "site": "http://mn.kbs.co.kr/mobile/news/view.do?ncd=4453411",
+    "txt": " 다만, 지역사회 감염 우려가 높은 지역의 학교들은  학생 간 접촉을 줄이기 위해,  등교 인원을 전체의  3분의 2가 되지 않도록 조정하기로 했습니다.",
+    "fontSize": "16px",
+    "fontFamily": "Helvetica-light, AppleSDGothicNeo-Medium, \"Noto Sans CJK\", \"Noto Sans\", \"Malgun Gothic\", \"맑은 고딕\", Dotum, 돋움, sans-serif",
+    "lineHeight": "24px",
+    "letterSpacing": "-0.5px",
+    "wordSpacing": "0px"
+  },
+  {
+    "journal": "mbc",
+    "site": "https://imnews.imbc.com/replay/2020/nwtoday/article/5783103_32531.html?utm_source=dable",
+    "txt": "실제로 정부가 일반 가구를 대상으로 지급한 '긴급재난지원금'의 경우, 스마트폰을 쓰는 대다수 20~50대 세대주는 집안에서 1~2분 만에 신청했지만, 공인인증서 발급에 애를 먹기 일쑤인 고령층은 한나절이 걸리더라도 은행 지점이나 주민센터 등을 직접 찾거나 자녀에게 맡길 수밖에 없다고 합니다. \n",
+    "fontSize": "16.08px",
+    "fontFamily": "\"Noto Sans CJK KR\", \"Helvetica Neue\", \"Apple SD Gothic Neo\", sans-serif",
+    "lineHeight": "24px",
+    "letterSpacing": "-0.804px",
+    "wordSpacing": "0px"
+  },
+  {
+    "journal": "mbn",
+    "site": "https://m.mbn.co.kr/news/society/4160671",
+    "txt": "\n서울시는 제한업종 업소 약 10만곳을 제외한 서울의 소상공인 업체를 57만여곳으로 보고, 이 중 72%가 지원을 받을 수 있을 것으로 예상한다고 설명했습니다.",
+    "fontSize": "17px",
+    "fontFamily": "\"Malgun Gothic\", dotum, Gulim, Helvetica, Apple-Gothic, sans-serif",
+    "lineHeight": "26.52px",
+    "letterSpacing": "-0.3px",
+    "wordSpacing": "0px"
+  },
+  {
+    "journal": "sbs",
+    "site": "https://mnews.sbs.co.kr/news/endPage.do?newsId=N1005801961&plink=SBSAPP&plink=SBSAPP",
+    "txt": "\n취임 첫해인 지난 2017년, 추도식에 참석했던 문재인 대통령은 \"성공한 대통령이 돼 임무를 다한 뒤 다시 당신을 찾아뵙겠다\"고 했었는데, 올해도 조화를 보내는 것으로 추모의 뜻을 대신했습니다.",
+    "fontSize": "16px",
+    "fontFamily": "\"Malgun Gothic\", \"맑은 고딕\", dotum, 돋움, sans-serif",
+    "lineHeight": "24.8px",
+    "letterSpacing": "-1px",
+    "wordSpacing": "0px"
+  },
+  {
+    "journal": "ytn",
+    "site": "https://m.ytn.co.kr/news_view.php?key=202005241950464452&s_mcd=0103",
+    "txt": "\n이 가운데 이태원 클럽 방문자가 96명, 가족이나 지인, 직장 동료 등 확진자 접촉을 통한 감염 사례는 129명으로 이른바 'n차 감염' 확산세가 심상치 않습니다.",
+    "fontSize": "17px",
+    "fontFamily": "\"Helvetica Neue\", \"Apple SD Gothic Neo\", 맑은고딕, \"Malgun Gothic\", Dotum, sans-serif",
+    "lineHeight": "26.35px",
+    "letterSpacing": "-1px",
+    "wordSpacing": "0px"
+  },
+  {
+    "journal": "네이버",
+    "site": "https://news.naver.com/main/read.nhn?mode=LSD&mid=shm&sid1=104&oid=001&aid=0011630435",
+    "txt": "    (베이징=연합뉴스) 심재훈 김윤구 김진방 특파원 = 미국과 중국 간 갈등이 커지는 가운데 왕이(王毅) 중국 외교 담당 국무위원 겸 외교부장은 신종 코로나바이러스 감염증(코로나19)이 양국에 공동의 적이라면서 양국 대립으로 신냉전 시대가 벌어지는 것을 경계해야 한다고 밝혔다.",
+    "fontSize": "16px",
+    "fontFamily": "\"Times New Roman\"",
+    "lineHeight": "normal",
+    "letterSpacing": "normal",
+    "wordSpacing": "0px"
+  },
+  {
+    "journal": "다음",
+    "site": "https://news.v.daum.net/v/20200524151604729",
+    "txt": "(예시) 가장 빠른 뉴스가 있고 다양한 정보, 쌍방향 소통이 숨쉬는 다음뉴스를 만나보세요. 다음뉴스는 국내외 주요이슈와 실시간 속보, 문화생활 및 다양한 분야의 뉴스를 입체적으로 전달하고 있습니다.",
+    "fontSize": "17px",
+    "fontFamily": "AppleSDGothicNeo, \"Malgun Gothic\", \"맑은 고딕\", sans-serif",
+    "lineHeight": "27px",
+    "letterSpacing": "normal",
+    "wordSpacing": "0px"
+  }
+]

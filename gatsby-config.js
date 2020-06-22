@@ -28,6 +28,7 @@ const config = {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 960,
+              showCaptions: true,
             },
           },
           {
