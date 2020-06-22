@@ -9712,17 +9712,23 @@ fsevents@~2.1.2:
     gatsby-transformer-remark: ^2.6.48
     gatsby-transformer-sharp: ^2.3.14
     katex: ^0.11.1
+    lines-and-columns: ^1.1.6
+    memoizesync: ^1.1.1
+    postcss: ^7.0.32
     prettier: ^1.19.1
     prismjs: ^1.17.1
     prop-types: ^15.7.2
+    qs: ^6.9.4
     react: ^16.12.0
     react-dom: ^16.12.0
     react-helmet: ^5.2.1
     react-icons: ^3.8.0
     react-typography: ^0.16.19
     react-utterances: ^0.6.4
+    specificity: ^0.4.1
     typography: ^0.16.19
     typography-theme-de-young: ^0.16.19
+    uglify-js: ^3.10.0
   languageName: unknown
   linkType: soft
 
@@ -13786,7 +13792,7 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"memoizesync@npm:1.1.1":
+"memoizesync@npm:1.1.1, memoizesync@npm:^1.1.1":
   version: 1.1.1
   resolution: "memoizesync@npm:1.1.1"
   dependencies:
@@ -16762,6 +16768,13 @@ fsevents@~2.1.2:
   version: 6.7.0
   resolution: "qs@npm:6.7.0"
   checksum: 8590470436ff0a75ae35e6b45fd7260e2beb537ff8ec1104f9703a349b09ce1aa27e8e1c06b9ad25ac62fc098e12cc65df93042a233128a0276ccd6de4c7819a
+  languageName: node
+  linkType: hard
+
+"qs@npm:^6.9.4":
+  version: 6.9.4
+  resolution: "qs@npm:6.9.4"
+  checksum: beba62d1e1c66e9888cc08a488eb95771c252a92289a96bff4b767a49e4e7afe9487d7ee3269b856292d8281b855ac5eac927c2e77f845e407ee4fe54743fea7
   languageName: node
   linkType: hard
 
@@ -20446,7 +20459,7 @@ resolve@1.1.7:
   languageName: node
   linkType: hard
 
-"uglify-js@npm:^3.5.1":
+"uglify-js@npm:^3.10.0, uglify-js@npm:^3.5.1":
   version: 3.10.0
   resolution: "uglify-js@npm:3.10.0"
   bin:
