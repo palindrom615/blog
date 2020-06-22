@@ -3,7 +3,7 @@ import deyoungTheme from "typography-theme-de-young"
 
 const typography = new Typography({
   ...deyoungTheme,
-  baseFontSize: '18px',
+  baseFontSize: '21px',
   googleFonts: [],
   headerFontFamily: ["Black Han Sans"],
   headerWeight: 400,
