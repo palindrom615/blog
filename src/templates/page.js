@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
+import { MDXRenderer } from "gatsby-plugin-mdx"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -12,10 +13,7 @@ class PageTemplate extends React.Component {
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <SEO
-          title={post.frontmatter.title}
-          lang={post.frontmatter.lang}
-        />
+        <SEO title={post.frontmatter.title} lang={post.frontmatter.lang} />
         <article>
           <header>
             <h1
@@ -27,7 +25,7 @@ class PageTemplate extends React.Component {
               {post.frontmatter.title}
             </h1>
           </header>
-          <section dangerouslySetInnerHTML={{ __html: post.body }} />
+          <MDXRenderer>{post.body}</MDXRenderer>
           <hr
             style={{
               marginBottom: rhythm(1),
