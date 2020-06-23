@@ -2,7 +2,7 @@
 layout: post
 title: "[마인크래프트] 최신 버전 자바 설치, 마인크래프트 적용 방법"
 tags: [minecraft 마인크래프트 자바 java jdk sdk]
-description: "자바, 스칼라, 코틀린, 그래들 sdk 관리하기"
+description: "그냥 아래에 있는대로 따라하면 끝"
 date: "2020-02-26"
 ---
 
@@ -18,6 +18,8 @@ date: "2020-02-26"
 `video: ./1-powershell.mp4`
 
 2. 파워 셸에 아래 스크립트를 복사/붙여 넣기
+
+    아래 글을 복사해서 파워셸 창에 붙여 넣으면 됨.
 
     파워셸 창에서 마우스 우클릭하면 복사된 텍스트 붙여넣기 가능하다. 조금 기다리면 자바 설치 끝.
 
@@ -45,9 +47,11 @@ date: "2020-02-26"
 
 `video: ./3-apply-to-minecraft.mp4`
 
-## [sdkman](https://github.com/palindrom615/sdkman)
+**자바 설치 끝!**
 
-자바뿐 아니라 스칼라, 코틀린 등의 언어/컴파일러, gradle, maven 등의 빌드 툴, Spark, spring boot 등의 프레임워크 등 JVM 이코시스템의 많은 sdk들을 관리해주는 [sdkman](https://sdkman.io/)이라는 툴이 있는데, 이게 bash로 짜여져 있어서 윈도우에서 사용하려면 WLS나 Cygwin을 사용해야 했다. 그게 별로 마음에 안들어서 클라이언트를 후딱 하나 짰다.
+## 자세한 설명(feat. [sdkman](https://github.com/palindrom615/sdkman))
+
+자바뿐 아니라 스칼라, 코틀린 등의 언어/컴파일러, gradle, maven 등의 빌드 툴, Spark, spring boot 등의 프레임워크 등 JVM 이코시스템의 많은 sdk들을 관리해주는 [sdkman](https://sdkman.io/)이라는 툴이 있는데, 이게 bash로 짜여져 있어서 윈도우에서 사용하려면 WLS나 Cygwin을 사용해야 했다. 그게 별로 마음에 안들어서 클라이언트를 go 언어로 후딱 하나 짰다.
 
 
 자바는 환경변수 설정이 왜이렇게 어려운지 모르겠다. 어차피  환경이 다 거기서 거기일텐데 좀 스마트하게 해주면 좋을 것을. 나도 옛날에 (`classpath`까지 손으로 설정해야 했으니까 java 5 이전 버전일듯) 맨날 설치할 때 뭐가 꼬여서 몇시간씩 낭비하고 그랬다.  
