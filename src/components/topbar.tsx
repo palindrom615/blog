@@ -9,7 +9,7 @@ import React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import { FaTwitter, FaGithub, FaLinkedin } from "react-icons/fa"
 
-const Footer = () => {
+const Topbar = () => {
   const data = useStaticQuery(graphql`
     query BioQuery {
       site {
@@ -55,4 +55,4 @@ const Footer = () => {
   )
 }
 
-export default Footer
+export default Topbar

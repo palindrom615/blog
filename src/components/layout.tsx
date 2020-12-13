@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 
 import { rhythm } from "../utils/typography"
-import Footer from "./footer"
+import Topbar from "./topbar"
 import "./layout.css"
 import Head from "./head"
 
@@ -21,7 +21,7 @@ class Layout extends React.Component {
         <Head />
         <header>
           <p style={{ display: "flex" }}>
-            <Footer />
+            <Topbar />
           </p>
           <Link to={`/`}>
             <h3>{title}</h3>
