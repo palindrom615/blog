@@ -4,7 +4,6 @@ const TypographyCard = ({ r, location }) => {
   const [img, setImg] = useState("")
   useEffect(() => {
     import(`${location}/${r.journal}-type.png`).then((v) => {
-      console.log(v)
       setImg(v.default)
     })
   }, [r.journal, location])
