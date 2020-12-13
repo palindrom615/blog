@@ -38,13 +38,13 @@ const Topbar = () => {
           justifyContent: "space-around",
         }}
       >
-        <a href={`https://github.com/${social.github}`}>
+        <a href={`https://github.com/${social.github}`} className="lnk">
           <FaGithub />
         </a>
-        <a href={`https://twitter.com/${social.twitter}`}>
+        <a href={`https://twitter.com/${social.twitter}`} className="lnk">
           <FaTwitter />
         </a>
-        <a href={`https://linkedin.com/in/${social.linkedin}`}>
+        <a href={`https://linkedin.com/in/${social.linkedin}`} className="lnk">
           <FaLinkedin />
         </a>
       </span>

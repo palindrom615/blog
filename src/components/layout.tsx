@@ -1,11 +1,18 @@
 import React, { FC } from "react"
-import { Link, PageProps } from "gatsby"
+import { Link } from "gatsby"
+import { MDXProvider } from "@mdx-js/react"
 
 import { rhythm } from "../utils/typography"
 import Topbar from "./topbar"
 import Head from "./head"
+import Anchor from "./Anchor"
+import H2WithId from "./h2WithId"
 
-const Layout: FC<PageProps> = ({ title, children }) => {
+interface LayoutProps {
+  title: string
+}
+
+const Layout: FC<LayoutProps> = ({ title, children }) => {
   return (
     <div
       style={{
@@ -22,7 +29,16 @@ const Layout: FC<PageProps> = ({ title, children }) => {
           <h3>{title}</h3>
         </Link>
       </header>
-      <main>{children}</main>
+      <main>
+        <MDXProvider
+          components={{
+            h2: H2WithId,
+            a: Anchor,
+          }}
+        >
+          {children}
+        </MDXProvider>
+      </main>
       <footer style={{ textAlign: "center" }}>
         <small>
           copyright(c) {new Date().getFullYear()} Jang Whe-moon. All right
