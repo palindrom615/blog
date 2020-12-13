@@ -4,8 +4,8 @@ const { createFilePath } = require(`gatsby-source-filesystem`)
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage, createRedirect } = actions
 
-  const blogPost = path.resolve(`./src/templates/blog-post.js`)
-  const page = path.resolve(`./src/templates/page.js`)
+  const blogPost = path.resolve(`./src/templates/blog-post.tsx`)
+  const page = path.resolve(`./src/templates/page.tsx`)
 
   const result = await graphql(
     `
@@ -38,11 +38,11 @@ exports.createPages = async ({ graphql, actions }) => {
 
   // Create blog posts pages.
   const posts = result.data.allMdx.edges.filter(
-    p => p.node.frontmatter.layout === "post"
+    (p) => p.node.frontmatter.layout === "post"
   )
 
   const pages = result.data.allMdx.edges.filter(
-    p => p.node.frontmatter.layout === "page"
+    (p) => p.node.frontmatter.layout === "page"
   )
   pages.forEach((post, idx) => {
     createPage({
@@ -58,9 +58,10 @@ exports.createPages = async ({ graphql, actions }) => {
     const next = index === 0 ? null : posts[index - 1].node
 
     createRedirect({
-      fromPath: `/${post.node.frontmatter.date.replace(/-/g, "/")}/${
-        post.node.fields.slug.replace(/\//g, "")
-      }`,
+      fromPath: `/${post.node.frontmatter.date.replace(
+        /-/g,
+        "/"
+      )}/${post.node.fields.slug.replace(/\//g, "")}`,
       toPath: post.node.fields.slug,
       isPermanent: true,
       redirectInBrowser: true,
@@ -91,9 +92,9 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 }
 
 exports.onCreateWebpackConfig = ({ actions }) => {
-    actions.setWebpackConfig({
-      resolve: {
-        modules: [path.resolve(__dirname, "content"), "node_modules"]
-      }
-    });
-  }
+  actions.setWebpackConfig({
+    resolve: {
+      modules: [path.resolve(__dirname, "content"), "node_modules"],
+    },
+  })
+}
