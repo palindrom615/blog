@@ -3,7 +3,6 @@ import { Link, PageProps } from "gatsby"
 
 import { rhythm } from "../utils/typography"
 import Topbar from "./topbar"
-import "./layout.css"
 import Head from "./head"
 
 const Layout: FC<PageProps> = ({ title, children }) => {

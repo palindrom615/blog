@@ -5,9 +5,12 @@ const typography = new Typography({
   ...deyoungTheme,
   baseFontSize: "21px",
   googleFonts: [],
-  headerFontFamily: ["Black Han Sans"],
+  headerFontFamily: ["Black Han Sans", "sans-serif"],
   headerWeight: 400,
-  bodyFontFamily: ["Jeju Myeongjo"],
+  bodyFontFamily: ["Jeju Myeongjo", "serif"],
+  overrideStyles: () => ({
+    "a:hover,a:active": {},
+  }),
 })
 
 // Hot reload typography in development.
