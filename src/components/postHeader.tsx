@@ -5,19 +5,11 @@ const PostHeader = ({ frontmatter }) => {
   const { title, date, description } = frontmatter
   return (
     <header>
-      <h1
-        style={{
-          marginTop: rhythm(1),
-          marginBottom: 0,
-        }}
-      >
-        {title}
-      </h1>
+      <h1>{title}</h1>
       <div style={{ color: "hsla(0,0%,0%, 0.6)" }}>
         <p
           style={{
             ...scale(-2 / 5),
-            display: `block`,
             marginBottom: rhythm(0.25),
           }}
         >
@@ -26,7 +18,6 @@ const PostHeader = ({ frontmatter }) => {
         <p
           style={{
             ...scale(-1 / 5),
-            display: `block`,
             marginBottom: rhythm(1),
           }}
         >

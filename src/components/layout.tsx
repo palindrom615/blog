@@ -20,16 +20,17 @@ class Layout extends React.Component {
       >
         <Head />
         <header>
-          <p style={{ display: "flex" }}>
-            <Topbar />
-          </p>
+          <Topbar />
           <Link to={`/`}>
             <h3>{title}</h3>
           </Link>
         </header>
         <main>{children}</main>
         <footer style={{ display: "flex", justifyContent: "center" }}>
-          <small>copyright(c) 2020 Jang Whe-moon. All right reserved.</small>
+          <small>
+            copyright(c) {new Date().getFullYear()} Jang Whe-moon. All right
+            reserved.
+          </small>
         </footer>
       </div>
     )

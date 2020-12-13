@@ -27,7 +27,7 @@ const Topbar = () => {
 
   const { author, social } = data.site.siteMetadata
   return (
-    <>
+    <p style={{ display: "flex" }}>
       <span style={{ flex: 1 }}>
         Written by <strong>{author}</strong>.{` `}{" "}
         <Link to={`/disclaimer`} style={{ marginLeft: "auto" }}>
@@ -51,7 +51,7 @@ const Topbar = () => {
           <FaLinkedin />
         </a>
       </span>
-    </>
+    </p>
   )
 }
 
