@@ -8,8 +8,10 @@ const typography = new Typography({
   headerFontFamily: ["Black Han Sans", "sans-serif"],
   headerWeight: 400,
   bodyFontFamily: ["Jeju Myeongjo", "serif"],
-  overrideStyles: () => ({
-    "a:hover,a:active": {},
+  overrideThemeStyles: () => ({
+    "a:hover,a:active": {
+      boxShadow: "unset",
+    },
   }),
 })
 

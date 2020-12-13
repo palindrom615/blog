@@ -2,31 +2,36 @@ import React, { FC } from "react"
 import { Link } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
 
-import { rhythm } from "../utils/typography"
+import { rhythm, scale } from "../utils/typography"
 import Topbar from "./topbar"
 import Head from "./head"
-import Anchor from "./Anchor"
+import Anchor from "./anchor"
 import H2WithId from "./h2WithId"
 
 interface LayoutProps {
   title: string
+  location: Location
 }
 
-const Layout: FC<LayoutProps> = ({ title, children }) => {
+const Layout: FC<LayoutProps> = ({ title, location, children }) => {
+  const rootPath = `${__PATH_PREFIX__}/`
+
   return (
     <div
       style={{
         marginLeft: `auto`,
         marginRight: `auto`,
         maxWidth: rhythm(24),
-        padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
+        paddingTop: `${rhythm(0.5)}`,
       }}
     >
       <Head />
       <header>
         <Topbar />
         <Link to={`/`}>
-          <h3>{title}</h3>
+          <h3 style={location.pathname === rootPath ? { ...scale(1.5) } : {}}>
+            {title}
+          </h3>
         </Link>
       </header>
       <main>
@@ -44,7 +49,7 @@ const Layout: FC<LayoutProps> = ({ title, children }) => {
           copyright(c) {new Date().getFullYear()} Jang Whe-moon. All right
           reserved.
           <br />
-          <Link to={`/disclaimer`} style={{ marginLeft: "auto" }}>
+          <Link to={`/disclaimer`} className="lnk">
             disclaimer
           </Link>
         </small>
