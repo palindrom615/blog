@@ -22,6 +22,7 @@ const TypographyCard = ({ r, location }) => {
         async
         src={img}
         style={{ margin: 0, boxShadow: "0 0 1px 1px lightgrey" }}
+        alt={`${r.journal}의 본문 타이포그래피`}
       />
       font-size <span style={{ fontWeight: "bold" }}> {r.fontSize}</span>
       <br />
