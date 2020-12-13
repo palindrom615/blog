@@ -1,54 +1,14 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import { rhythm, scale } from "../utils/typography"
+import { rhythm } from "../utils/typography"
 import Footer from "./footer"
 import "./layout.css"
 import Head from "./head"
 
 class Layout extends React.Component {
   render() {
-    const { location, title, children } = this.props
-    const rootPath = `${__PATH_PREFIX__}/`
-    let header
-
-    if (location.pathname === rootPath) {
-      header = (
-        <h1
-          style={{
-            ...scale(1.5),
-            marginBottom: rhythm(1.5),
-            marginTop: 0,
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
-            }}
-            to={`/`}
-          >
-            {title}
-          </Link>
-        </h1>
-      )
-    } else {
-      header = (
-        <h3>
-          <Link
-            style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
-            }}
-            to={`/`}
-          >
-            {title}
-          </Link>
-        </h3>
-      )
-    }
+    const { title, children } = this.props
     return (
       <div
         style={{
@@ -59,15 +19,18 @@ class Layout extends React.Component {
         }}
       >
         <Head />
-        <header style={{ display: "flex", flexDirection: "column" }}>
-          <p style={{ marginLeft: "auto" }}>
-            <Link to={`/about`}>about</Link>{" "}
-            <Link to={`/disclaimer`}>disclaimer</Link>
+        <header>
+          <p style={{ display: "flex" }}>
+            <Footer />
           </p>
-          {header}
+          <Link to={`/`}>
+            <h3>{title}</h3>
+          </Link>
         </header>
         <main>{children}</main>
-        <Footer />
+        <footer style={{ display: "flex", justifyContent: "center" }}>
+          <small>copyright(c) 2020 Jang Whe-moon. All right reserved.</small>
+        </footer>
       </div>
     )
   }

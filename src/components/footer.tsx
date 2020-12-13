@@ -6,10 +6,8 @@
  */
 
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 import { FaTwitter, FaGithub, FaLinkedin } from "react-icons/fa"
-
-import { rhythm } from "../utils/typography"
 
 const Footer = () => {
   const data = useStaticQuery(graphql`
@@ -29,15 +27,12 @@ const Footer = () => {
 
   const { author, social } = data.site.siteMetadata
   return (
-    <footer
-      style={{
-        display: "flex",
-        justifyContent: "space-between",
-        marginBottom: rhythm(2.5),
-      }}
-    >
-      <span style={{ flex: 2 }}>
-        Written by <strong>{author}</strong>.{` `}
+    <>
+      <span style={{ flex: 1 }}>
+        Written by <strong>{author}</strong>.{` `}{" "}
+        <Link to={`/disclaimer`} style={{ marginLeft: "auto" }}>
+          <small>disclaimer</small>
+        </Link>
       </span>
       <span
         style={{
@@ -56,7 +51,7 @@ const Footer = () => {
           <FaLinkedin />
         </a>
       </span>
-    </footer>
+    </>
   )
 }
 
