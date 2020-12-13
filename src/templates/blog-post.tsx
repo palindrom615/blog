@@ -9,10 +9,10 @@ import { rhythm } from "../utils/typography"
 import "katex/dist/katex.min.css"
 import PostHeader from "../components/postHeader"
 
-const BlogPostTemplate: FC<PageProps> = (props) => {
-  const { mdx: post, site } = props.data
+const BlogPostTemplate: FC<PageProps> = ({ data, location, pageContext }) => {
+  const { mdx: post, site } = data
   const siteTitle = site.siteMetadata.title
-  const { previous, next, slug } = props.pageContext
+  const { previous, next, slug } = pageContext
 
   return (
     <Layout title={siteTitle} location={location}>
