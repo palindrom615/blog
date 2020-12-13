@@ -29,10 +29,7 @@ const Topbar = () => {
   return (
     <p style={{ display: "flex" }}>
       <span style={{ flex: 1 }}>
-        Written by <strong>{author}</strong>.{` `}{" "}
-        <Link to={`/disclaimer`} style={{ marginLeft: "auto" }}>
-          <small>disclaimer</small>
-        </Link>
+        Written by <strong>{author}</strong>.
       </span>
       <span
         style={{

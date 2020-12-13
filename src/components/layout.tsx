@@ -24,10 +24,14 @@ const Layout: FC<PageProps> = ({ title, children }) => {
         </Link>
       </header>
       <main>{children}</main>
-      <footer style={{ display: "flex", justifyContent: "center" }}>
+      <footer style={{ textAlign: "center" }}>
         <small>
           copyright(c) {new Date().getFullYear()} Jang Whe-moon. All right
           reserved.
+          <br />
+          <Link to={`/disclaimer`} style={{ marginLeft: "auto" }}>
+            disclaimer
+          </Link>
         </small>
       </footer>
     </div>
