@@ -7,6 +7,7 @@ import Topbar from "./topbar"
 import Head from "./head"
 import Anchor from "./anchor"
 import H2WithId from "./h2WithId"
+import Footer from "./footer"
 
 interface LayoutProps {
   title: string
@@ -22,7 +23,7 @@ const Layout: FC<LayoutProps> = ({ title, location, children }) => {
         marginLeft: `auto`,
         marginRight: `auto`,
         maxWidth: rhythm(24),
-        paddingTop: `${rhythm(0.5)}`,
+        padding: `${rhythm(0.5)} ${rhythm(0.5)} 0`,
       }}
     >
       <Head />
@@ -44,16 +45,7 @@ const Layout: FC<LayoutProps> = ({ title, location, children }) => {
           {children}
         </MDXProvider>
       </main>
-      <footer style={{ textAlign: "center" }}>
-        <small>
-          copyright(c) {new Date().getFullYear()} Jang Whe-moon. All right
-          reserved.
-          <br />
-          <Link to={`/disclaimer`} className="lnk">
-            disclaimer
-          </Link>
-        </small>
-      </footer>
+      <Footer />
     </div>
   )
 }
