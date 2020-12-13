@@ -15,7 +15,7 @@ const BlogPostTemplate: FC<PageProps> = (props) => {
   const { previous, next, slug } = props.pageContext
 
   return (
-    <Layout location={props.location} title={siteTitle}>
+    <Layout title={siteTitle}>
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
@@ -39,20 +39,19 @@ const BlogPostTemplate: FC<PageProps> = (props) => {
             flexWrap: `wrap`,
             justifyContent: `space-between`,
             listStyle: `none`,
-            padding: 0,
           }}
         >
           <li>
-            {previous && (
-              <Link to={previous.fields.slug} rel="prev">
-                ← {previous.frontmatter.title}
+            {next && (
+              <Link to={next.fields.slug} rel="next">
+                ← {next.frontmatter.title}
               </Link>
             )}
           </li>
           <li>
-            {next && (
-              <Link to={next.fields.slug} rel="next">
-                {next.frontmatter.title} →
+            {previous && (
+              <Link to={previous.fields.slug} rel="prev">
+                {previous.frontmatter.title} →
               </Link>
             )}
           </li>
