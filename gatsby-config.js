@@ -98,7 +98,20 @@ const pluginsProd = [
   },
 ]
 
+const pluginsDev = [
+  {
+    resolve: `gatsby-source-filesystem`,
+    options: {
+      path: `${__dirname}/content/drafts`,
+      name: `blog`,
+    },
+  },
+]
+
 if (process.env.NODE_ENV != "development") {
   config.plugins = config.plugins.concat(pluginsProd)
+} else {
+  config.plugins = config.plugins.concat(pluginsDev)
 }
+
 module.exports = config
