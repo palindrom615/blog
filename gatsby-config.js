@@ -82,21 +82,7 @@ const config = {
   ],
 }
 
-const pluginsProd = [
-  `gatsby-plugin-sitemap`,
-  {
-    resolve: `@palindrom615/gatsby-plugin-subfont`,
-    options: {
-      fontDisplay: "block",
-      fallbacks: false,
-      inPlace: true,
-      inlineCss: false,
-      // FIX: gatsby ssr prevent subfonting per page
-      subsetPerPage: false,
-      inputFiles: ["public/**/index.html", "public/404.html"],
-    },
-  },
-]
+const pluginsProd = [`gatsby-plugin-sitemap`, `gatsby-plugin-subfont`]
 
 const pluginsDev = [
   {
@@ -108,7 +94,7 @@ const pluginsDev = [
   },
 ]
 
-if (process.env.NODE_ENV != "development") {
+if (process.env.NODE_ENV !== "development") {
   config.plugins = config.plugins.concat(pluginsProd)
 } else {
   config.plugins = config.plugins.concat(pluginsDev)

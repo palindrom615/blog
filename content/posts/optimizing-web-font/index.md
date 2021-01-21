@@ -75,11 +75,11 @@ subfont -i --dry-run **/index.html
 
 CLI에서 돌려 보면 이런 식으로 결과가 나온다. 잘 읽어보면 제주명조에 포함된 17718자의 글리프중 블로그에서는 946개의 글자만 사용되는 것을 알 수 있다.
 
-내 블로그는 gatsbyJS로 짜는데, subfont를 돌려주는 플러그인이 있다. 쓰기도 쉽고, 글꼴을 직접 호스팅하면 속도에도 약간 이득이 있어서 구글 폰트를 못쓰는 상황에서 다들 시도해보는 것도 좋을 것 같다. (아직 머지가 안돼서 지금 당장은 내 버전 플러그인 [@palindrom615/gatsby-plugin-subfont](https://www.npmjs.com/package/@palindrom615/gatsby-plugin-subfont)을 써야 한다)
+내 블로그는 gatsbyJS로 짜는데, subfont를 돌려주는 플러그인이 있다. 쓰기도 쉽고, 글꼴을 직접 호스팅하면 속도에도 약간 이득이 있어서 구글 폰트를 못쓰는 상황에서 다들 시도해보는 것도 좋을 것 같다.
 
 ```bash
 pip3 install fonttools brotli zopfli
-npm i @palindrom615/gatsby-plugin-subfont
+npm i gatsby-plugin-subfont
 ```
 
 파이썬 폰트 툴인 fonttools에 의존성이 있어서 빌드 스크립트에 fonttools 설치 스크립트를 넣어야 하는 점이 약간 아쉽다. netlify나 now.sh은 리포에 `requirements.txt`를 작성해 놓으면 알아서 파이썬 의존성이 설치되니 참고하시라.
