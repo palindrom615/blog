@@ -69,7 +69,7 @@ const config = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: `UA-136784336-1`,
+        trackingId: `G-ZVQPHX1B6C`,
       },
     },
     `gatsby-plugin-react-helmet`,
