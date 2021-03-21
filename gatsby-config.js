@@ -67,9 +67,9 @@ const config = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: `gatsby-plugin-google-gtag`,
       options: {
-        trackingId: `G-ZVQPHX1B6C`,
+        trackingIds: [`G-ZVQPHX1B6C`],
       },
     },
     `gatsby-plugin-react-helmet`,
