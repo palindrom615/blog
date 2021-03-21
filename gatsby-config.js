@@ -82,7 +82,20 @@ const config = {
   ],
 }
 
-const pluginsProd = [`gatsby-plugin-sitemap`, `gatsby-plugin-subfont`]
+const pluginsProd = [
+  `gatsby-plugin-sitemap`,
+  {
+    resolve: `gatsby-plugin-subfont`,
+    options: {
+      fontDisplay: "block",
+      fallbacks: false,
+      inPlace: true,
+      inlineCss: false,
+      subsetPerPage: false,
+      inputFiles: ["public/**/index.html", "public/404.html"],
+    },
+  },
+]
 
 const pluginsDev = [
   {
