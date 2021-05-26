@@ -31,6 +31,8 @@ const config = {
       resolve: `gatsby-plugin-mdx`,
       options: {
         extensions: [`.md`, `.mdx`],
+        remarkPlugins: [require("remark-math")],
+        rehypePlugins: [require("rehype-katex")],
         gatsbyRemarkPlugins: [
           {
             resolve: `gatsby-remark-images`,
@@ -45,25 +47,19 @@ const config = {
               wrapperStyle: `margin-bottom: 1.0725rem`,
             },
           },
-          {
-            resolve: `gatsby-remark-video`,
-            options: {
-              width: "100%",
-              preload: "auto",
-              muted: true,
-              autoplay: true,
-              playsinline: true,
-              controls: true,
-              loop: true,
-            },
-          },
           `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
-          `gatsby-remark-katex`,
+          {
+            resolve: `gatsby-remark-katex`,
+            options: {
+              strict: `ignore`,
+            },
+          },
         ],
       },
     },
+    `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
