@@ -20,8 +20,8 @@ export default function Image({ src, alt, ...props }) {
   const image = allImageSharp.edges.find(
     (edge) => edge.node.fluid.originalName === src
   )
-  if (!image) {
+  if (!image?.node?.gatsbyImageData) {
     return null
   }
-  return <GatsbyImage image={image.gatsbyImageData} alt={alt} {...props} />
+  return <GatsbyImage image={image.node.gatsbyImageData} alt={alt} {...props} />
 }
