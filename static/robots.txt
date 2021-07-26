@@ -1,2 +1,3 @@
 User-agent: *
 Disallow:
+Sitemap: https://palindrom615.dev/sitemap/sitemap-index.xml
