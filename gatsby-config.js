@@ -84,7 +84,7 @@ const pluginsProd = [
     resolve: `gatsby-plugin-subfont`,
     options: {
       fontDisplay: "block",
-      fallbacks: false,
+      fallbacks: true,
       inPlace: true,
       inlineCss: false,
       subsetPerPage: false,
