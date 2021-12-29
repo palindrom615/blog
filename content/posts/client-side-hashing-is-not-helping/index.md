@@ -2,7 +2,6 @@
 layout: post
 title: 로그인할 때 패스워드를 해싱해서 보내는 것은 보안에 아무런 도움이 안됩니다
 tags: [pass]
-description: description
 date: 2021-12-29
 ---
 
