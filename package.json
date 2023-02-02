@@ -7,7 +7,7 @@
     "@mdx-js/mdx": "^1.6.21",
     "@mdx-js/react": "^1.6.21",
     "@types/react-helmet": "^6.1.0",
-    "gatsby": "^3.6.0",
+    "gatsby": "^3.15.0",
     "gatsby-cli": "^3.6.0",
     "gatsby-plugin-google-gtag": "^3.6.0",
     "gatsby-plugin-image": "^1.6.0",
